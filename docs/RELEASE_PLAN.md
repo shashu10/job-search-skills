@@ -1,10 +1,10 @@
 # Product and release plan
 
-Updated 25 October 2026 for v0.3.0. The [README](../README.md) is the current capability reference.
+Updated 25 October 2026 for v0.3.1. The [README](../README.md) is the current capability reference.
 
-## v0.3.0: four entry points, ten supporting workflows
+## Current: four entry points, ten supporting workflows
 
-Lead with Find Jobs Worth Applying For, Find Referrals, Interview Coach and Offer Negotiator. Preserve the ten stable workflow IDs: setup, resume, research, outreach, application, interview, offer, inbox, pipeline review and requested scheduling. Keep private facts and live records outside the public package. Include blank templates, a Python initializer, a fictional walkthrough, decision scenarios, validation notes and an MIT license.
+Lead with Find Jobs Worth Applying For, Find Referrals, Interview Coach and Offer Negotiator. Preserve the ten stable workflow IDs: setup, resume, research, outreach, application, interview, offer, inbox, pipeline review and requested scheduling. Keep private facts and live records outside the public package. Use natural-language installation and agent-managed setup from blank templates. Include a fictional walkthrough, decision scenarios, validation notes and an MIT license.
 
 Sourcing produces a reviewable shortlist. Explicit authorization starts applications and any necessary resume work. Referral research can sweep the applied-role cohort while preserving existing conversations. Interview coaching and compensation discussions can start before an invitation or offer. Inbox and scheduling use available host tools; they do not bundle connectors or a scheduler. Resume preparation uses available document tooling; no personal template or new renderer is included.
 
@@ -30,7 +30,7 @@ Suggested headline: **Find worthwhile jobs, find referrals, practice interviews 
 
 Lead with connected context, inspectable records and useful next steps. Open source, local storage and agent skills already appear in related projects; avoid first/only claims or unsupported promises of better hiring outcomes. The [fictional walkthrough](../examples/walkthrough.md) should make the benefit tangible.
 
-Pair a tagged GitHub release with a practical article and short demo. Give readers one action: download the package and run the example. Invite specific contributions such as an importer, document adapter or evaluation case. Prioritize repeat use and successful workflows over star counts or application volume.
+Pair a tagged GitHub release with a practical article and short demo. Give readers one action: paste the install prompt into their agent. Invite specific contributions such as an importer, document adapter or evaluation case. Prioritize repeat use and successful workflows over star counts or application volume.
 
 ## Release discipline
 

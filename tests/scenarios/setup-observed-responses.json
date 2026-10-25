@@ -1,0 +1,34 @@
+{
+  "release": "v0.3.1",
+  "fictional": true,
+  "evaluation_date": "2026-10-25",
+  "method": "One independent evaluator executed two synthetic setup requests using shell file operations only. No Python, package runtime, initializer, network or accounts were used for setup. The coordinator inspected responses and final files and independently verified preservation. Temporary response paths are normalized below.",
+  "cases": [
+    {
+      "id": "new-workspace-file-tools",
+      "request": "Set up my job search in this new private folder. Handle setup for me. I want product engineering in Example Region, work in English, and need employer work-authorization support. My confirmed experience is workflow-editor frontend work. No application or messaging grant. I can supply the rest later.",
+      "response": "Your private job-search workspace is ready in [private-search](workspace/AGENTS.md), with the installed skills mapped to one application tracker and one outreach record.\n\nI recorded product engineering in Example Region, English as the working language, required employer work-authorization support, and only your confirmed workflow-editor frontend experience. Other details remain unknown, and unused records are blank. Application and messaging permissions remain unset; setup made no external actions or schedules.\n\nThe next useful action is a focused shortlist for your review. Your target level and fuller experience can be added when you are ready.\n",
+      "observed": [
+        "Blank templates copied and gitignore.template renamed to .gitignore.",
+        "Only supplied facts and preferences populated; optional details unknown and application/message grants unset.",
+        "No external actions or schedules."
+      ]
+    },
+    {
+      "id": "existing-workspace-file-tools",
+      "request": "Use this existing search folder with the skills. Keep my filenames and history; identify the next useful action.",
+      "response": "Your existing folder is connected to the installed skills through [AGENTS.md](workspace/AGENTS.md). Your filenames, candidate facts, role history and keep.txt are preserved. I added one blank outreach record and local recordkeeping guidance; tracking/roles.md remains the sole application record.\n\nEX-401 remains a confirmed submission with receipt DEMO-401 and a later candidate hold. No later employer outcome is recorded, and the hold remains in force.\n\nThe next useful action is a shortlist of other product-frontend roles in Example Region that use English. Before ranking those roles, confirm your work-authorization support needs; that detail is absent from the existing profile. No applications, messages or schedules were created.\n",
+      "preserved_sha256": {
+        "facts/candidate.md": "91950d53889afd924b387a8a51b2989b9954baa34281a44fc928889442e9dc2c",
+        "tracking/roles.md": "91170715d37e890e974e61b912280b09bbed3021e92a43a5e08c7086e63646c6",
+        "keep.txt": "b4698e075c565cf61e5b4af0df921f91e3bbb6e325e010661b3e1753dfe14c8e"
+      },
+      "observed": [
+        "Original router retained as prefix with appended skill/source mapping.",
+        "Only tracking/contacts.md and tracking/recordkeeping.md added.",
+        "EX-401 submission, DEMO-401 receipt and later hold preserved."
+      ]
+    }
+  ],
+  "limits": "Single observations, not a reliability claim. Skills were already available; this did not test installation through any host or the production skill loader. Shell file operations were used; other file-tool implementations may differ. No concurrent writer or copy interruption was simulated."
+}

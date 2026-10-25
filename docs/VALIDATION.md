@@ -1,12 +1,12 @@
 # Validation and limits
 
-Release: v0.3.0, 25 October 2026.
+Release: v0.3.1, 25 October 2026.
 
 ## Automated checks
 
 The package checker validates the ten-skill catalog, frontmatter, UI metadata, local routing links, blank templates and representative privacy patterns. It rejects unexpected file types and symlinks. To inspect an extracted release, run `python3 scripts/check_package.py --root PATH`.
 
-The 16-test unit suite exercises fresh initialization with all ten skills, existing destination preservation, public-package destination refusal, invalid catalogs, symlink boundaries, standalone setup, private links, credential patterns and personal paths. CI is configured for Python 3.10 and 3.13.
+The 16-test unit suite covers the retained legacy initializer, existing destination preservation, public-package destination refusal, invalid catalogs, symlink boundaries, standalone setup, private links, credential patterns and personal paths. CI is configured for Python 3.10 and 3.13. The normal setup instructions use file tools; these code tests do not test an agent following that procedure.
 
 These are structural and program tests. They do not prove that a model obeys every instruction or that every portal works.
 
@@ -51,7 +51,9 @@ These are single observations, not a reliability rate. Catalog selection by an e
 
 ## Compatibility and external execution
 
-The helper requires Python 3.10 or later and no third-party libraries. Direct skill folders and plugin metadata follow the documented format. Marketplace installation has not been certified across host versions. No universal plugin-directory listing is claimed.
+For v0.3.1, an independent evaluator performed two fictional setup requests using shell file operations only: a new private workspace and an existing workspace with custom filenames. The coordinator inspected the outputs, verified the new `.gitignore`, and confirmed that existing candidate facts, role history and a preservation marker stayed byte-for-byte intact. The existing router was extended, not replaced. [Actual responses and observations](../tests/scenarios/setup-observed-responses.json) record the exercise and its limits. No Python, package runtime or initializer was used for setup. Skills were already available, so this did not test installation through a host.
+
+The normal installation and setup instructions require no Python step. A legacy workspace helper remains for compatibility; it requires Python 3.10 or later and no third-party libraries. Direct skill folders and plugin metadata follow the documented format. Natural-language installation depends on the host's available installer and permissions; it has not been certified across hosts. No universal plugin-directory listing is claimed.
 
 This release includes no provider implementations, scheduler service, UI or deterministic permission-enforcement runtime. External outcomes depend on the host, tools, user access and actual instructions. Resume rendering requires separate document tools. Behavioral evaluations are limited observations, not guarantees of future behavior.
 

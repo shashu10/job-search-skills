@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.1 — 2026-10-25
+
+- Shorten the README and example around four everyday requests.
+- Lead installation with a prompt users can paste into their agent.
+- Make setup use ordinary file tools and blank templates, with no Python installation step.
+- Move skill IDs, update guidance and tool details into a separate agent reference. Existing helper remains available for compatibility.
+
 ## 0.3.0 — 2026-10-25
 
 - Lead with four entry points: Find Jobs Worth Applying For, Find Referrals, Interview Coach and Offer Negotiator. Preserve all ten skill IDs and automatic discovery.
