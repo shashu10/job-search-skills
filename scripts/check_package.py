@@ -10,6 +10,7 @@ from pathlib import Path
 import re
 import sys
 from urllib.parse import unquote
+import xml.etree.ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -20,10 +21,25 @@ EXPECTED_SKILLS = {
 }
 SKIP_PARTS = {".git", "__pycache__", ".cache"}
 TEXT_SUFFIXES = {".md", ".py", ".json", ".yaml", ".yml", ".template", ".txt"}
+WORKFLOW_SVG = "docs/assets/job-search-workflow.svg"
+# Keep these exceptions narrow; both still pass the text privacy screen.
+APPROVED_TEXT_ASSETS = {WORKFLOW_SVG, "scripts/render-workflow.mjs"}
+SVG_NAMESPACE = "http://www.w3.org/2000/svg"
+SVG_ELEMENTS = {
+    "svg", "g", "defs", "title", "desc", "style", "symbol", "use",
+    "path", "rect", "circle", "ellipse", "line", "polyline", "polygon",
+    "text", "tspan", "textPath", "marker", "clipPath", "mask", "pattern",
+    "linearGradient", "radialGradient", "stop", "filter", "feBlend",
+    "feColorMatrix", "feComponentTransfer", "feComposite", "feConvolveMatrix",
+    "feDiffuseLighting", "feDisplacementMap", "feDistantLight", "feDropShadow",
+    "feFlood", "feFuncA", "feFuncB", "feFuncG", "feFuncR", "feGaussianBlur",
+    "feMerge", "feMergeNode", "feMorphology", "feOffset", "fePointLight",
+    "feSpecularLighting", "feSpotLight", "feTile", "feTurbulence",
+}
 # Binary contents cannot pass the text privacy screen. Approve each asset only
 # after visual/privacy review; any replacement requires a new reviewed digest.
 APPROVED_BINARY_ASSETS = {
-    "docs/assets/job-search-workflow.png": "77357067b24a19bb6666ff20ee994c515eebca8ede8691e3e722591150a8c590",
+    "docs/assets/job-search-workflow.png": "60673d6e88addf06b85b06569eb1e66b6719b82afe1751f74e458d7353d87041",
 }
 SENSITIVE_PATTERNS = {
     "personal machine path": re.compile(r"/(?:Users|home)/[A-Za-z0-9_.-]+/"),
@@ -39,6 +55,55 @@ SENSITIVE_PATTERNS = {
 def inspect_text(text: str) -> list[str]:
     """Deliberately conservative screening; not a complete privacy detector."""
     return [label for label, pattern in SENSITIVE_PATTERNS.items() if pattern.search(text)]
+
+
+def inspect_svg(content: str) -> list[str]:
+    """Accept self-contained SVG shapes/text, without executable or fetched data."""
+    if re.search(r"<!\s*(?:DOCTYPE|ENTITY)\b|<\?(?!xml(?:\s|\?>))", content, re.IGNORECASE):
+        return ["SVG declarations or processing instructions are not allowed"]
+    try:
+        document = ET.fromstring(content)
+    except ET.ParseError:
+        return ["invalid SVG XML"]
+    if document.tag not in {"svg", f"{{{SVG_NAMESPACE}}}svg"}:
+        return ["SVG root must be svg"]
+
+    errors: set[str] = set()
+    allowed_namespaces = {SVG_NAMESPACE, "http://www.w3.org/1999/xlink", "http://www.w3.org/XML/1998/namespace"}
+
+    def inspect_value(value: str, *, css: bool = False) -> None:
+        # XML parsing resolves character references before privacy/link checks.
+        errors.update(inspect_text(value))
+        if re.search(r"(?:https?|file|data|javascript):|//", value, re.IGNORECASE) and not css:
+            errors.add("SVG external references are not allowed")
+        for match in re.finditer(r"url\s*\((.*?)\)", value, re.IGNORECASE | re.DOTALL):
+            target = match.group(1).strip().strip("\"'")
+            if not re.fullmatch(r"#[A-Za-z_][\w:.-]*", target):
+                errors.add("SVG external references are not allowed")
+        if "\\" in value or (css and re.search(r"@import\b|expression\s*\(", value, re.IGNORECASE)):
+            errors.add("SVG CSS imports, escapes and expressions are not allowed")
+
+    for element in document.iter():
+        tag = element.tag.removeprefix(f"{{{SVG_NAMESPACE}}}")
+        if tag not in SVG_ELEMENTS:
+            errors.add("SVG contains a non-native or disallowed element")
+        if element.text:
+            errors.update(inspect_text(element.text))
+            if tag == "style":
+                inspect_value(element.text, css=True)
+        if element.tail:
+            errors.update(inspect_text(element.tail))
+        for name, value in element.attrib.items():
+            if name.startswith("{"):
+                namespace, name = name[1:].split("}", 1)
+                if namespace not in allowed_namespaces:
+                    errors.add("SVG uses an unsupported attribute namespace")
+            if name.lower().startswith("on"):
+                errors.add("SVG event handlers are not allowed")
+            if name == "href" and not re.fullmatch(r"#[A-Za-z_][\w:.-]*", value):
+                errors.add("SVG external references are not allowed")
+            inspect_value(value, css=name == "style")
+    return sorted(errors)
 
 
 def check(root: Path) -> list[str]:
@@ -60,7 +125,8 @@ def check(root: Path) -> list[str]:
             if digest != APPROVED_BINARY_ASSETS[relative.as_posix()]:
                 errors.append(f"{relative}: changed binary asset; visual/privacy review required")
             continue
-        if file.suffix not in TEXT_SUFFIXES and file.name not in {"LICENSE", ".gitignore"}:
+        if (file.suffix not in TEXT_SUFFIXES and file.name not in {"LICENSE", ".gitignore"}
+                and relative.as_posix() not in APPROVED_TEXT_ASSETS):
             errors.append(f"{relative}: unexpected file type; inspect before sharing")
             continue
         try:
@@ -69,6 +135,8 @@ def check(root: Path) -> list[str]:
             errors.append(f"{relative}: non-text data")
             continue
         errors.extend(f"{relative}: {label}" for label in inspect_text(content))
+        if relative.as_posix() == WORKFLOW_SVG:
+            errors.extend(f"{relative}: {label}" for label in inspect_svg(content))
         if file.suffix == ".json":
             try:
                 json.loads(content)

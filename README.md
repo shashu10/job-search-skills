@@ -23,6 +23,8 @@ Already have a job-search folder? Ask the agent to use it. To try the workflow f
 
 ![Job Search Workflows: work history and peer feedback support resume tailoring. Find and Apply to Jobs and Find and Request Referrals act after your confirmation. Interview Coach supports practice, and Offer Negotiator supports your decision. Both coaches are available anytime.](docs/assets/job-search-workflow.png)
 
+[Editable SVG](docs/assets/job-search-workflow.svg)
+
 ## Find and Apply to Jobs
 
 **Try asking**

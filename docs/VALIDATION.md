@@ -1,12 +1,12 @@
 # Validation and limits
 
-Release: v0.3.3, 25 October 2026.
+Release: v0.3.4, 25 October 2026.
 
 ## Automated checks
 
 The package checker validates the ten-skill catalog, frontmatter, UI metadata, local routing links, blank templates and representative privacy patterns. It accepts the visually reviewed workflow PNG only at its approved path and SHA-256 digest, and rejects other unexpected file types and symlinks. To inspect an extracted release, run `python3 scripts/check_package.py --root PATH`.
 
-The 18-test unit suite covers the retained legacy initializer, existing destination preservation, public-package destination refusal, invalid catalogs, symlink boundaries, standalone setup, private links, credential patterns, personal paths, altered approved images and unapproved image paths. CI is configured for Python 3.10 and 3.13. The normal setup instructions use file tools; these code tests do not test an agent following that procedure.
+The 22-test unit suite covers the retained legacy initializer, existing destination preservation, public-package destination refusal, invalid catalogs, symlink boundaries, standalone setup, private links, credential patterns, personal paths, altered approved images, unapproved asset paths and SVG content restrictions. CI is configured for Python 3.10 and 3.13. The normal setup instructions use file tools; these code tests do not test an agent following that procedure.
 
 These are structural and program tests. They do not prove that a model obeys every instruction or that every portal works.
 
@@ -65,4 +65,4 @@ This release includes no provider implementations, scheduler service, UI or dete
 
 Release preparation uses public procedures, blank templates and fictional evidence. The automated scanner is supplemented by manual file-content review and inspection of the exported tree. Git identity uses the public account name and its no-reply address. A release archive excludes `.git`, local caches and untracked data.
 
-For v0.3.3, the public [workflow diagram](assets/job-search-workflow.png) was adapted with imagegen from the author's article illustration. Two agents visually checked its labels, confirmation steps and generic content. The personal date stamp and qualitative conversion percentages were removed; no candidate records were copied. The image's provenance metadata was also inspected. Text screening cannot inspect pixels; replacing this image requires a new visual review and digest update.
+The v0.3.3 diagram used imagegen. In v0.3.4 it was replaced by an editable [SVG source](assets/job-search-workflow.svg) and a [PNG rendered from that source](assets/job-search-workflow.png). Native text, shapes and icons replace the earlier raster artwork. The renderer checked all 39 labels for width and containment and checked nodes for overlap before exporting at 2400×3680. The SVG and renderer pass text privacy screening; XML checks reject executable content, embedded images and external references. Text screening cannot inspect PNG pixels, so replacements still require visual review and a digest update. [Render instructions](assets/README.md) describe how to maintain the diagram.

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "job-search-skills",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Automate job search, application form filling, referral requests, interview preparation and offer negotiation with your AI agent. You confirm submissions and sends.",
   "repository": "https://github.com/shashu10/job-search-skills",
   "license": "MIT",

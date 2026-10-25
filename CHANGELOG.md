@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.4 — 2026-10-25
+
+- Rebuild the workflow diagram as native SVG and export a crisp 2400×3680 PNG.
+- Include the editable source and a browser-based render utility with label and layout checks.
+- Keep the shorter README copy and Job Search Workflows title. Screen the SVG and renderer as text; reject embedded raster images and external SVG content.
+
 ## 0.3.3 — 2026-10-25
 
 - Add a public workflow diagram adapted from the article, with the four skill names, confirmation before applications and referral requests, and coaching available anytime.

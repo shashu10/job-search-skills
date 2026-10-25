@@ -76,6 +76,71 @@ class PackageTests(unittest.TestCase):
                 module.check(root),
             )
 
+    def test_svg_allows_native_shapes_filters_and_local_references(self):
+        source = '''<svg xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+          <defs>
+            <marker id="arrow"><path d="M0 0L5 5L0 10Z"/></marker>
+            <filter id="shadow"><feGaussianBlur stdDeviation="2"/></filter>
+            <g id="card"><rect width="50" height="30"/></g>
+          </defs>
+          <use xlink:href="#card" style="filter: url('#shadow')"/>
+          <path d="M0 0L100 100" marker-end="url(#arrow)"/>
+          <text aria-label="Stage: review">Review<tspan> and confirm</tspan></text>
+        </svg>'''
+        self.assertEqual(module.inspect_svg(source), [])
+
+    def test_svg_rejects_executable_embedded_or_external_content(self):
+        fragments = (
+            '<script>alert(1)</script>',
+            '<foreignObject><p>HTML</p></foreignObject>',
+            '<image href="data:image/png;base64,AAAA"/>',
+            '<feImage href="#shape"/>',
+            '<use href="https://example.invalid/external.svg#shape"/>',
+            '<use href="external.svg#shape"/>',
+            '<use href="&#104;ttps://example.invalid/external.svg#shape"/>',
+            '<rect onclick="alert(1)"/>',
+            '<rect fill="url(external.svg#paint)"/>',
+            '<rect style="fill: url(https://example.invalid/paint.svg)"/>',
+            '<style>@import "https://example.invalid/style.css";</style>',
+            '<style>rect { fill: url(data:image/png;base64,AAAA); }</style>',
+        )
+        for fragment in fragments:
+            with self.subTest(fragment=fragment):
+                self.assertTrue(module.inspect_svg('<svg>' + fragment + '</svg>'))
+        for source in (
+            '<svg><rect></svg>',
+            '<?xml-stylesheet href="external.css"?><svg/>',
+            '<!DOCTYPE svg SYSTEM "external.dtd"><svg/>',
+        ):
+            with self.subTest(source=source):
+                self.assertTrue(module.inspect_svg(source))
+
+    def test_svg_and_renderer_still_receive_privacy_screening(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "package"
+            shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns(".git", "__pycache__", ".DS_Store"))
+            personal_path = "/" + "Users" + "/fictional-person/resume.md"
+            (root / module.WORKFLOW_SVG).write_text('<svg><text>' + personal_path + '</text></svg>')
+            renderer = root / "scripts/render-workflow.mjs"
+            renderer.write_text('// ' + personal_path)
+            errors = module.check(root)
+            self.assertIn(module.WORKFLOW_SVG + ": personal machine path", errors)
+            self.assertIn("scripts/render-workflow.mjs: personal machine path", errors)
+            # Numeric XML references cannot hide the same path from SVG parsing.
+            encoded = personal_path.replace("/", "&#47;")
+            self.assertIn("personal machine path", module.inspect_svg('<svg><text>' + encoded + '</text></svg>'))
+
+    def test_svg_and_renderer_are_allowed_only_at_exact_paths(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "package"
+            shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns(".git", "__pycache__", ".DS_Store"))
+            (root / "unapproved.svg").write_text('<svg/>')
+            (root / "unapproved.mjs").write_text('// synthetic script')
+            errors = module.check(root)
+            for name in ("unapproved.svg", "unapproved.mjs"):
+                self.assertIn(name + ": unexpected file type; inspect before sharing", errors)
+
     def test_documentation_link_allowed(self):
         self.assertEqual(module.inspect_text("https://developers.openai.com/codex/skills"), [])
 
