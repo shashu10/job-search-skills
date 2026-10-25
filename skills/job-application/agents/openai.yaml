@@ -1,0 +1,6 @@
+interface:
+  display_name: "Job Application"
+  short_description: "Complete authorized applications with evidence"
+  default_prompt: "Use $job-application to complete the next authorized application in my private job-search workspace."
+policy:
+  allow_implicit_invocation: true

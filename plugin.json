@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "job-search-skills",
+  "version": "0.2.0",
+  "description": "Ten portable skills for resumes, job research, applications, outreach, interviews, inbox reviews, offers and scheduling.",
+  "repository": "https://github.com/shashu10/job-search-skills",
+  "license": "MIT",
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/job-search-setup/SKILL.md"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "job-search-skills-local",
+  "interface": {
+    "displayName": "Job Search Skills"
+  },
+  "plugins": [
+    {
+      "name": "job-search-skills",
+      "source": {"source": "local", "path": "./"},
+      "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
+      "category": "Productivity"
+    }
+  ]
+}

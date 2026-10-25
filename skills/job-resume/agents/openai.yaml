@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Resume"
+  short_description: "Turn verified experience into reviewed resumes"
+  default_prompt: "Use $job-resume to review my evidence and select or tailor an accurate resume for this role."

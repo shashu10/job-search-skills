@@ -1,0 +1,6 @@
+interface:
+  display_name: "Recruiting Outreach"
+  short_description: "Find hiring contacts and handle approved outreach"
+  default_prompt: "Use $recruiting-outreach to find useful hiring contacts and draft a message using my private job-search workspace."
+policy:
+  allow_implicit_invocation: true

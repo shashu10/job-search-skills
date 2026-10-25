@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Search Setup"
+  short_description: "Set up a private, reusable job-search workspace"
+  default_prompt: "Use $job-search-setup to organize my job search using my existing facts and preferences."

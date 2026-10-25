@@ -1,0 +1,6 @@
+interface:
+  display_name: "Job Research"
+  short_description: "Discover companies and verify suitable job matches"
+  default_prompt: "Use $job-research to discover relevant employers and rank verified openings using my private job-search workspace."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Offer"
+  short_description: "Compare offer terms and candidate priorities"
+  default_prompt: "Use $job-offer to compare these offers, show uncertain assumptions and identify the terms I should clarify."

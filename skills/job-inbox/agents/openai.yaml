@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Inbox"
+  short_description: "Reconcile recruiting messages with private records"
+  default_prompt: "Use $job-inbox to review new recruiting messages and reconcile my private records."

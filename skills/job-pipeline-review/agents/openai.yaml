@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Pipeline Review"
+  short_description: "Summarize progress and prioritize the next action"
+  default_prompt: "Use $job-pipeline-review to give me a concise update and the highest-priority next steps from my private job-search workspace."

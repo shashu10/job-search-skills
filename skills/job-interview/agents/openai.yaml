@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Interview"
+  short_description: "Practice interviews and learn from grounded debriefs"
+  default_prompt: "Use $job-interview to prepare for my next confirmed interview using my career evidence and the employer’s instructions."

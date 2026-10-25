@@ -1,0 +1,4 @@
+# Private by default, including profiles, contacts, receipts and installed skills.
+# Deliberately review any exceptions before tracking or sharing files.
+*
+!.gitignore

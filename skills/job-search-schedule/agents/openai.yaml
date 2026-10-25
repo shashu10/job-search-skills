@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Search Schedule"
+  short_description: "Configure scoped job-search runs and reminders"
+  default_prompt: "Use $job-search-schedule to configure a scoped recurring job-search workflow."
