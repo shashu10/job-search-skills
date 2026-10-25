@@ -23,7 +23,7 @@ TEXT_SUFFIXES = {".md", ".py", ".json", ".yaml", ".yml", ".template", ".txt"}
 # Binary contents cannot pass the text privacy screen. Approve each asset only
 # after visual/privacy review; any replacement requires a new reviewed digest.
 APPROVED_BINARY_ASSETS = {
-    "docs/assets/job-search-workflow.png": "08db14b064f695c5e49b0c02c8d53f8f16652be4d85b09c3e277003870f705a6",
+    "docs/assets/job-search-workflow.png": "77357067b24a19bb6666ff20ee994c515eebca8ede8691e3e722591150a8c590",
 }
 SENSITIVE_PATTERNS = {
     "personal machine path": re.compile(r"/(?:Users|home)/[A-Za-z0-9_.-]+/"),
