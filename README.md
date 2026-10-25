@@ -43,7 +43,7 @@ Already have a job-search folder? Ask the agent to use it. To try the workflow f
 
 > Coach me on system design. Ask one question and let me answer before hints.
 
-Review code, strengthen project stories, learn a concept or run a mock. Use your study material and preparation budget. Track independent work, feedback and retries. **No interview booking required.**
+Review code, strengthen project stories, learn a concept or run a mock. Use your study material and preparation budget. Track independent work, feedback and retries.
 
 ## Ask Offer Negotiator
 
