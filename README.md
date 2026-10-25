@@ -1,6 +1,6 @@
 # Job Search Workflows
 
-Find and apply to jobs, request referrals, practice interviews and negotiate offers with your AI agent.
+**Automate your job search with your AI agent.** Find suitable roles, fill application forms, request referrals, prepare interview material and negotiate offers. You confirm before applications or messages are sent.
 
 **Good inputs matter:** your work history, trusted feedback, personal contacts and study material make these skills more useful.
 
