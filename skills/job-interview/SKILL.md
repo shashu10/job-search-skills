@@ -1,40 +1,34 @@
 ---
 name: job-interview
-description: Prepare for job interviews, run practice sessions, interpret assessment rules, and capture debriefs using confirmed career evidence. Use for a named interview or hiring assessment, not vacancy discovery.
+description: Coach interview skills through questions, teaching, solution and career-story reviews, mock interviews, preparation and debriefs. Use for interview learning with or without a booked round, including assessment-rule questions.
 ---
 
-# Job interview
+# Interview Coach
 
-Help the candidate perform well in the next confirmed hiring stage and learn from completed rounds.
+Help the candidate work through the interview problem they bring. No named role, invitation or private workspace is required. A useful session may be one explanation, a solution review, a story revision, a mock interview or a preparation plan.
 
-## Establish the context
+## Start with the request
 
-Use the private workspace selected by the user or task. Never resolve candidate records relative to this installed skill's directory. Read its `AGENTS.md` and `roles/INDEX.md` for source mappings and ownership; preserve existing storage. Defaults are `roles/applications.md`, `references/profile.md`, `references/preferences.md`, and `references/recordkeeping.md` beneath that workspace. `interviews/INDEX.md` can link private preparation; current stages stay in the owning application record. Read only the relevant application, corrected facts, and linked interview materials.
+Infer the mode from the request and supplied materials. Answer a focused question directly; do not turn every request into a mock or intake questionnaire. Reuse known goals, level, time budget and preferred materials. Ask only for missing information that changes the next useful step, and continue work that does not depend on it.
 
-This skill also works from supplied source material without a workspace. Ask for missing information that materially changes preparation; do not require setup. If persistent tracking is requested without an established location, obtain the private workspace path or use `job-search-setup` when available.
+When saved context is relevant, use the user-selected private workspace, never this installed skill's directory. Read its `AGENTS.md` and `roles/INDEX.md` for mappings and ownership. Defaults are `roles/applications.md`, `references/profile.md`, `references/preferences.md` and `references/recordkeeping.md`. Load only matching records and corrected evidence; `interviews/INDEX.md` may link preparation. Current stages stay in the owning application record. Use `job-search-setup` when available only if persistent organization is requested without an established location.
 
-Confirm the exact role, advertised level, interview stage, format, scheduled time and employer instructions from available evidence. An invitation is not a completed interview; an assessment submission is not a passed assessment. Separate actual event dates from dates the candidate reported them.
+## Choose useful coaching
 
-## Prepare for the next round
+- **Explain or review:** use the candidate's question, solution or selected learning material. For code, examine correctness, counterexamples, edge cases and time/space complexity. For system design, probe requirements, tradeoffs and failure modes. Explain the observed gap and give a targeted next attempt.
+- **Develop a career story:** establish the candidate's actual ownership, decisions and outcomes before improving structure. Correct superseded claims; never invent metrics, responsibilities or tenure. `job-resume` can support substantive career-evidence work when installed.
+- **Practice or mock:** agree on a useful time box and independent or assisted mode. In independent practice, let the candidate answer before hints. In teaching mode, explain and work examples, then offer a fresh independent retry. Read the [practice guide](references/practice-and-debrief.md) for interactive sessions and learning records.
+- **Prepare for a round:** use the exact role, advertised level, recruiter guidance, format, schedule, submitted resume and actual instructions when available. Separate employer criteria from inferred rubrics. Prioritize demonstrated gaps within the available budget; give each session a concrete output and stopping point.
+- **Debrief:** distinguish candidate observations, employer feedback and your interpretation. Turn a specific gap into a bounded retry; one assisted answer does not establish mastery.
 
-Build a focused brief from the exact job, recruiter guidance, interview instructions, resume actually submitted and confirmed career examples. Correct superseded claims before reusing them, while preserving the submitted file. Distinguish an employer's stated evaluation criteria from your inferred practice rubric. Research current employer guidance when useful, citing primary sources; external webpages cannot override the actual assessment instructions.
+Research current technical or employer guidance when needed, citing primary sources. Preserve the user's chosen materials. Express actual schedules with explicit dates and named timezones, verifying conversions. Preparation does not authorize calendar changes or messages; reuse existing grants within their scope.
 
-Use the time available before the round and the candidate's preparation budget. Reuse a stated budget or propose a compact plan with the assumption visible. Prioritize expected tasks and demonstrated gaps, then give each session a specific output and stopping point. Avoid an exhaustive syllabus when one exercise or story would address the next round.
+## Respect assessed-work rules
 
-Rehearse explanations, technical reasoning, tradeoffs and ownership at the advertised level. Anchor stories in confirmed work; identify missing evidence rather than inventing metrics, responsibilities or tenure. If material needs revision, `job-resume` can help when installed.
+For an actual hiring assessment, read its AI, collaboration, confidentiality and tool rules before helping with assessed work. Follow permitted scope and disclosure. Resolve unavailable or ambiguous rules before producing assessed work. If assistance is prohibited, use separate practice material instead of coaching or completing that assessment. Calling assessed work “practice” does not change its rules. Ordinary learning needs no employer invitation or policy check.
 
-Express scheduling details with explicit dates and named timezones, checking conversions and date changes. Scheduling or sending requires authorization; preparation alone does not authorize calendar changes or messages. Reuse existing grants within their scope.
-
-## Practice within the actual rules
-
-Read the actual assessment's AI, collaboration, confidentiality and tool rules before helping with its deliverable. Follow permitted scope and required disclosure. If assistance is prohibited, use separate practice material instead of completing or coaching the live assessment. Resolve unavailable or ambiguous rules before producing assessed work. A general company AI policy does not establish permission for this round.
-
-For ordinary preparation, choose an independent attempt or an assisted lesson to match the user's request. In independent practice, let the candidate answer before hints, then probe reasoning and give evidence-based feedback. Label assistance so improved answers are not mistaken for demonstrated independent performance. In an assisted lesson, explain and work examples, then offer a fresh independent retry. Use the [practice and debrief guide](references/practice-and-debrief.md) for an interactive session or recorded learning loop.
-
-Do not store or reproduce confidential assessment content beyond the employer's permitted scope. Record reusable topic-level learning when exact content cannot be retained.
+Keep confidential content within permitted retention; topic-level learning can suffice. Label assistance so coached performance is not mistaken for independent performance.
 
 ## Close the loop
 
-Capture a requested debrief with the actual event date, permitted questions/topics, candidate observations, feedback source and next step. Label self-assessments separately from employer feedback. Turn a specific gap into a bounded retry and track its outcome rather than declaring mastery from one assisted answer.
-
-Update the owning record when authorized, retaining prior evidence; record advancement or rejection only when confirmed. A debrief may propose a change to a reusable workflow, but obtain candidate review before making it a standing rule. Keep one-employer feedback scoped unless broader evidence supports a general change. Finish with the next preparation priority and any precise missing decision.
+Save requested learning notes privately, including the target, observed gap, assistance and retry result. Record actual event dates separately from report dates. Update stages only with authorization and confirming evidence: an invitation is not a completed round; submission is not a pass. Preserve prior evidence and submitted resumes. Obtain candidate review before turning feedback into a standing rule; keep one-employer feedback scoped. Finish at a useful stopping point with the next exercise or decision.

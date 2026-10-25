@@ -1,12 +1,25 @@
 # Job Search Skills
 
-**Run your job search with the AI agent you already use.**
+**Find worthwhile jobs, find referrals, practice interviews and negotiate offers with the AI agent you already use.**
 
-Ten open-source skills connect your experience, resumes, opportunities, applications, conversations and interview preparation. Your agent helps with the work; your private records show what happened and what needs attention.
+Four everyday entry points connect your search. Ten open-source skills support them with resume preparation, applications, private records and follow-through. Ask in ordinary language; you do not need to learn the internal skill names.
 
 Start with one workflow or install the whole bundle. Designed for people comfortable using an AI agent with local files. Examples focus on product engineering, while candidate facts, countries, professions, languages and priorities remain configurable.
 
-**[Download v0.2.0](https://github.com/shashu10/job-search-skills/releases/tag/v0.2.0)** · [Fictional walkthrough](examples/walkthrough.md) · [Validation](docs/VALIDATION.md) · [MIT license](LICENSE)
+**[Download v0.3.0](https://github.com/shashu10/job-search-skills/releases/tag/v0.3.0)** · [Fictional walkthrough](examples/walkthrough.md) · [Validation](docs/VALIDATION.md) · [MIT license](LICENSE)
+
+## Start with what you need
+
+| Entry point | Try asking | What you get |
+| --- | --- | --- |
+| [Find Jobs Worth Applying For](skills/job-research/SKILL.md) | “Find jobs worth applying for. Give me a shortlist to review.” | Verified openings, fit and gaps, suggested routes, and your pursue/pass/hold decisions |
+| [Find Referrals](skills/recruiting-outreach/SKILL.md) | “Find referral routes for the jobs I've applied to. Start with people I know.” | Personal contacts, existing connections and relevant public contacts, with evidence and suggested requests |
+| [Interview Coach](skills/job-interview/SKILL.md) | “Coach me on system design,” or “Review this project story.” | Explanations, reviews, mocks, focused preparation and feedback with a fresh retry |
+| [Offer Negotiator](skills/job-offer/SKILL.md) | “A recruiter asked my salary expectations,” or “Help me negotiate this offer.” | Compensation scenarios, negotiation strategy and rehearsal, and decisions grounded in your priorities |
+
+These are examples of intent, not required keywords. Interview coaching works before an invitation; negotiation support works before an offer. A narrow question needs only the relevant context. Tool access determines which sources the agent can actually inspect.
+
+Review the shortlist, then say what to pursue, pass or hold. “Apply to these approved roles” starts application work within your authorization: select a suitable resume, tailor it when needed, complete the form and retain the receipt. Your interest in a role alone is not submission permission. Existing explicit grants are reused within their scope.
 
 ## Quick start
 
@@ -19,49 +32,54 @@ python3 skills/job-search-setup/scripts/init_workspace.py ../my-job-search --ski
 Open the new `my-job-search` folder in your agent and ask:
 
 ```text
-Use job-search-setup to set up my search. Start with my resume and ask only
-for missing preferences that affect which roles we should pursue.
+Help me find jobs worth applying for. Start with my resume and ask only
+for missing preferences that affect which roles to recommend. Let me review
+the shortlist before applying.
 ```
 
 The helper copies blank templates and all ten skills into a new private workspace outside this repository. It uses the Python standard library, makes no network calls, refuses existing destinations and creates no Git remote. Its generated `.gitignore` excludes workspace contents by default. Optional fields can remain unknown until needed.
 
 Already have a job-search workspace? Ask setup to map your existing records. Do not run the initializer over them. Updating public skills never authorizes replacing your facts, history or permissions.
 
-## Choose a workflow
+## Supporting workflows and stable skill names
 
-| Skill | Use it for | Result |
-| --- | --- | --- |
-| [job-search-setup](skills/job-search-setup/SKILL.md) | Onboarding or mapping existing records | Private workspace, priorities and source ownership |
-| [job-resume](skills/job-resume/SKILL.md) | Career evidence, peer feedback and resume tailoring | Supported claims, reviewed materials and preserved versions |
-| [job-research](skills/job-research/SKILL.md) | Company discovery and exact-role qualification | Current openings, fit, uncertainties and useful routes |
-| [recruiting-outreach](skills/recruiting-outreach/SKILL.md) | Contacts, referrals, drafts and authorized messages | Relevant conversations and recorded sends/replies |
-| [job-application](skills/job-application/SKILL.md) | Completing or recovering authorized applications | Exact role, submitted material and receipt, or a precise blocker |
-| [job-interview](skills/job-interview/SKILL.md) | Preparation, practice and debriefs | A focused plan and specific exercises for the next round |
-| [job-offer](skills/job-offer/SKILL.md) | Offer comparisons and negotiation preparation | Cash/equity distinctions, tradeoffs and unresolved terms |
-| [job-inbox](skills/job-inbox/SKILL.md) | Recruiting message review and reconciliation | Source-linked updates and honest coverage checkpoints |
-| [job-pipeline-review](skills/job-pipeline-review/SKILL.md) | Quick priorities or full progress analysis | Reliable counts, source freshness and next actions |
-| [job-search-schedule](skills/job-search-schedule/SKILL.md) | Requested reminders and recurring runs | Verified host configuration, or a clearly uncreated specification |
+The four entry points use the existing IDs `job-research`, `recruiting-outreach`, `job-interview` and `job-offer`. Existing explicit invocations and folder paths continue to work. Supporting skills remain discoverable and can also be requested directly:
 
-Each skill has a narrow trigger and loads supporting references only when needed. A standalone resume edit, interview session or offer comparison can use supplied documents without workspace setup.
+| Supporting skill | When it helps |
+| --- | --- |
+| [job-search-setup](skills/job-search-setup/SKILL.md) | Map existing records or establish the private workspace and missing preferences |
+| [job-resume](skills/job-resume/SKILL.md) | Review experience and peer feedback; select or tailor accurate application materials |
+| [job-application](skills/job-application/SKILL.md) | Complete authorized applications, invoke resume work when needed and verify receipts |
+| [job-inbox](skills/job-inbox/SKILL.md) | Reconcile recruiting replies and identify interview or offer next steps |
+| [job-pipeline-review](skills/job-pipeline-review/SKILL.md) | Answer “What needs my attention?” or analyze progress |
+| [job-search-schedule](skills/job-search-schedule/SKILL.md) | Configure requested reminders or recurring work through an available host scheduler |
+
+Skills load supporting references only when needed. Supplied materials are enough for a standalone resume edit, coaching session or compensation question; workspace setup is not a prerequisite for those tasks.
 
 ## How the pieces connect
 
 ```mermaid
 flowchart TD
-  E[Experience and peer feedback] --> R[Verified resume and career stories]
-  R --> J[Qualify roles and choose a route]
-  J --> C[Conversations and referrals]
-  J --> A[Applications and receipts]
-  C --> I[Interview preparation and practice]
-  A --> I
-  I --> D[Debrief and targeted retry]
+  J[Find jobs worth applying for] --> Q[Review shortlist: pursue, pass or hold]
+  Q --> C[Find referrals]
+  Q --> A[Authorized application]
+  E[Experience and peer feedback] --> R[Select or tailor resume]
+  A --> R
+  R --> S[Submit and verify receipt]
+  S --> C
+  C --> I[Interview Coach]
+  S --> I
+  P[Practice or learning question] --> I
+  I --> D[Feedback and fresh retry]
   D --> I
-  I --> O[Offer comparison and candidate decision]
+  N[Compensation question or offer] --> O[Offer Negotiator]
+  I --> O
+  O --> U[Candidate decision]
 ```
 
 Shared records support every stage. Inbox reconciliation brings in new evidence, and pipeline review identifies what needs attention. A debrief can suggest a reusable improvement; it does not silently turn one employer's feedback into a permanent rule.
 
-The [worked example](examples/walkthrough.md) follows a fictional candidate through a corrected resume, a referral hold, an application and interview preparation.
+The [worked example](examples/walkthrough.md) follows a fictional candidate through shortlist decisions, resume support, referral routes, practice and compensation questions.
 
 ## Your records, separate from the package
 
@@ -101,10 +119,14 @@ The initializer installs skills under `.agents/skills/`, a documented Codex disc
 For supported Codex plugin clients, this repository includes a portable manifest and repository marketplace:
 
 ```sh
-codex plugin marketplace add shashu10/job-search-skills --ref v0.2.0
+codex plugin marketplace add shashu10/job-search-skills --ref v0.3.0
 ```
 
 Then install Job Search Skills through the client's plugin browser and start a new session. Client support varies; the direct workspace initializer remains the simple local path. Repository distribution is separate from listing in the universal public Plugins Directory. See [official packaging documentation](https://developers.openai.com/plugins/build/plugins).
+
+### Updating from v0.2.0
+
+Skill IDs and the private-workspace layout remain compatible. Update through your plugin client, or replace only the matching installed skill folders from the new release. Preserve private records and custom instructions; do not rerun the initializer over an existing workspace. The revised blank workspace router is a reference for merging the new entry-point descriptions into an existing `AGENTS.md`, not a replacement for personal rules. Host clients may display the full ten-skill catalog even though this guide leads with four entry points.
 
 ## Privacy and permissions
 
@@ -127,4 +149,4 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before contributing; never attach privat
 
 ## Roadmap
 
-The optional dashboard, machine-readable record API and provider adapters are future work. v0.2.0 is the ten-skill workflow package with a private-workspace initializer. See [the release plan](docs/RELEASE_PLAN.md) and [changelog](CHANGELOG.md).
+The optional dashboard, machine-readable record API and provider adapters are future work. v0.3.0 exposes four everyday entry points backed by ten skills and a private-workspace initializer. See [the release plan](docs/RELEASE_PLAN.md) and [changelog](CHANGELOG.md).

@@ -1,8 +1,8 @@
 # Interview and practice materials
 
-No interview materials recorded yet. Current employer stages and confirmed scheduling facts belong in the tracker mapped by [roles/INDEX.md](../roles/INDEX.md). This index locates preparation, practice and debrief evidence without duplicating the pipeline.
+No coaching materials recorded yet. Use this index for general practice as well as specific interviews; a booked round is not required. Current employer stages and confirmed scheduling facts belong in the tracker mapped by [roles/INDEX.md](../roles/INDEX.md). This index locates preparation, practice and debrief evidence without duplicating the pipeline.
 
-| Employer / exact role / stage | Tracker link | Brief / employer instructions | Exact submitted materials | Practice / debrief links |
+| Coaching goal or employer / role / stage | Tracker link, if applicable | Brief / employer instructions, if applicable | Relevant career evidence / submitted materials | Practice / debrief links |
 |---|---|---|---|---|
 
 For a brief, retain the instructions' source/date, format, evaluation topics, assessment AI/collaboration rules, relevant confirmed career examples and preparation priorities. Keep the employer's criteria distinct from an inferred practice rubric.

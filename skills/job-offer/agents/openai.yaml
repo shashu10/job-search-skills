@@ -1,4 +1,4 @@
 interface:
-  display_name: "Job Offer"
-  short_description: "Compare offer terms and candidate priorities"
-  default_prompt: "Use $job-offer to compare these offers, show uncertain assumptions and identify the terms I should clarify."
+  display_name: "Offer Negotiator"
+  short_description: "Discuss compensation and negotiate before or after offers"
+  default_prompt: "Use $job-offer as my Offer Negotiator to work through salary expectations, a potential package, negotiation practice or an offer decision."

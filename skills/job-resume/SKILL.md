@@ -1,11 +1,11 @@
 ---
 name: job-resume
-description: Review career evidence and peer feedback, select or tailor a resume, and verify reusable application materials. Use for resumes, bios and supporting career stories, not applications or interview practice.
+description: Review career evidence and peer feedback, select or tailor a resume, and verify reusable application materials. Use directly for resumes, bios and career stories or as supporting work during an authorized application; submission belongs to job-application.
 ---
 
 # Resume and career evidence
 
-Turn the candidate's actual experience into accurate, useful materials. Reuse a suitable current document before creating another variant.
+Turn the candidate's actual experience into accurate, useful materials. Reuse a suitable current document before creating another variant. Accept handoffs from application or coaching work without requiring the user to invoke this skill separately; return the verified artifact and unresolved claims to the requesting workflow.
 
 ## Find the authoritative evidence
 

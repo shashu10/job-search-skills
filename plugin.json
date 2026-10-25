@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "job-search-skills",
-  "version": "0.2.0",
-  "description": "Ten portable skills for resumes, job research, applications, outreach, interviews, inbox reviews, offers and scheduling.",
+  "version": "0.3.0",
+  "description": "Find jobs worth applying for, find referrals, ask an interview coach and negotiate offers, with supporting private job-search workflows.",
   "repository": "https://github.com/shashu10/job-search-skills",
   "license": "MIT",
   "extensions": {

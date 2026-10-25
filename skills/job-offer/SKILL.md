@@ -1,38 +1,38 @@
 ---
 name: job-offer
-description: Capture and compare employment offers, verify compensation assumptions and prepare negotiation options against the candidate's priorities. Use for offer decisions, not investing, tax filing or accepting on the candidate's behalf.
+description: Coach employment compensation and negotiation before or after an offer, including salary expectations, prospective packages, rehearsal, offer comparisons and decisions. Use for candidate employment negotiations, not investing or tax filing.
 ---
 
-# Offer evaluation
+# Offer Negotiator
 
-Make the candidate's tradeoffs explicit using the terms actually offered. An attractive estimate is not a contractual commitment or an acceptance decision.
+Help the candidate reason through compensation and negotiate toward their priorities. Start with their question; no existing offer or private workspace is required. Keep estimates, stated employer terms and candidate decisions distinct.
 
-## Establish evidence and scope
+## Start with the decision
 
-Use the user-selected private workspace. Read its `AGENTS.md` and `roles/INDEX.md` for source mappings and ownership; never resolve candidate data beneath the installed skill. Defaults are `roles/applications.md`, `references/profile.md`, `references/preferences.md` and `references/recordkeeping.md` beneath that workspace. `offers/INDEX.md` can link private comparisons; current stages stay in the owning application record. Load only the matching opportunity, relevant preferences, offer documents and communication. Preserve existing storage and records.
+Infer whether the user needs help answering a salary question, exploring a potential package, planning or rehearsing negotiation, evaluating an actual offer, or making a decision. Answer narrow questions directly. Reuse known priorities, constraints and deadlines; ask only for missing context that changes the advice. Do not require sensitive salary history or a private minimum to begin.
 
-This skill also works from supplied offer material without a workspace. Ask for the few missing terms that change the comparison. Use `job-search-setup` only if available and persistent organization is requested. Keep offer documents and completed comparisons private.
+When saved context is relevant, use the user-selected private workspace, never this installed skill's directory. Read its `AGENTS.md` and `roles/INDEX.md` for mappings and ownership. Defaults are `roles/applications.md`, `references/profile.md`, `references/preferences.md` and `references/recordkeeping.md`. `offers/INDEX.md` may link comparisons; current stages stay in the owning application record. Load only matching records and preserve their storage. Use `job-search-setup` when available only if persistent organization is requested without an established location. Keep documents, negotiation limits and completed comparisons private.
 
-Identify the employer/legal entity, employment location, role/level, document version, source date, offer status and response deadline with timezone. Distinguish verbal, written, conditional, revised and expired offers. A recruiter estimate is not a guaranteed term. Retain competing versions and resolve conflicts against the latest actual offer or explicit employer clarification; recency alone does not prove an informal statement amends a contract.
+## Choose the useful mode
 
-## Normalize and compare
+- **Salary expectations:** clarify currency, role/level, location and whether the question concerns base or total compensation. Help request the employer's range or frame a truthful expectation using available evidence. Do not invent a market benchmark or disclose private limits by default.
+- **Prospective packages:** compare explicitly hypothetical scenarios. Label inputs as confirmed, estimated or unknown; an advertised band or recruiter estimate is not an offer. Explore which missing term would change the decision.
+- **Strategy or rehearsal:** identify the candidate's goal, real alternatives, timing, relationship and negotiable terms. Read the [negotiation and scenario guide](references/negotiation-and-scenarios.md) for a negotiation plan, interactive rehearsal or detailed modelling. Draft or rehearse a specific request with truthful support; never fabricate competing offers or commitments.
+- **Actual offers:** establish legal entity, location, role/level, source/version, conditions and response deadline with timezone. Distinguish verbal, written, conditional, revised and expired offers. Preserve versions; informal recency alone does not amend a contract.
+- **Decision:** weigh pay alongside responsibilities, team, hours, location, stability and the candidate's other priorities. Recommend conditionally, identify unresolved terms and show what would change the recommendation. A score is not an objective verdict.
 
-Use the optional [comparison template](assets/offer-comparison.md) for multiple offers or complex terms. Do not require it for one narrow question.
+## Compare meaningful terms
 
-- Separate base cash, guaranteed payments, target/discretionary bonus, commissions, one-time amounts, benefits and equity. Keep currency, payment frequency, eligibility, vesting, cliffs and conditions visible. Do not add one-time payments to recurring annual compensation without labelling the year.
-- Model equity by its actual instrument and terms: units, exercise/strike price if applicable, vesting, expiry and liquidity limits. Distinguish public market value, an employer-provided private valuation and realizable cash. Unvested or illiquid equity is not money available for expenses. Use transparent downside/base/upside scenarios instead of a single confident private-equity value.
-- Compare first-year cash and recurring cash separately. Show formulas, time periods, currency conversion source/date and assumptions. If required inputs are missing, leave the result unknown or show an explicitly conditional range. Check arithmetic and avoid counting the same benefit twice.
-- Compare work and constraints as well as pay: responsibilities, manager/team, working hours, travel, location, remote terms, relocation, leave, probation, notice, repayment/clawbacks and work-authorization support. Mark unknowns; do not infer sponsorship from a multinational name or an offer's existence.
-- Use the candidate's stated priorities. If a weighted comparison helps, show its weights and sensitivity rather than presenting the score as an objective verdict. Do not assume salary outweighs family, health, craft, stability or location.
+Use the optional [comparison template](assets/offer-comparison.md) for multiple options or complex terms. Separate recurring cash, target/discretionary pay, one-time amounts, benefits and equity; retain currencies, frequency, eligibility and conditions. Show first-year and recurring cash separately. Equity depends on instrument, vesting, exercise terms and liquidity; unvested or illiquid equity is not spendable cash.
+
+When relevant inputs exist, compare 12/24-month cash, relocation and housing costs, and conditional equity scenarios using the guide. Show formulas, assumptions and sensitivity; unknown inputs are not zero. Check arithmetic and avoid double-counting. Include work-authorization support, probation, notice and repayment/clawbacks when relevant; neither an offer nor an employer's name proves work rights.
 
 ## Verify consequential assumptions
 
-Use current primary sources for market prices, exchange rates, jurisdiction-specific tax, employment rules or immigration requirements. Cite source dates and the relevant jurisdiction. Read the offer's actual terms before interpreting them. Keep contractual facts, public rules and modelling assumptions separate.
+Use current primary sources for market data, exchange rates, jurisdiction-specific tax, employment rules or immigration requirements. Cite dates and jurisdiction. Separate contractual facts, public rules and modelling assumptions.
 
-Do not infer tax residency, work rights, enforceability, net pay or professional legal/tax conclusions from location alone. Explain material uncertainty and identify the specific employer or qualified-adviser question needed before relying on a result. Do not access financial accounts or initiate transactions as part of comparison.
+Do not infer residency, work rights, enforceability or net pay from location alone. Identify the specific employer or qualified-adviser clarification needed for consequential uncertainty. No financial-account access or transactions are part of comparison.
 
-## Support the decision
+## Preserve the candidate's control
 
-Give a recommendation conditional on the candidate's priorities, the key tradeoffs and a short list of unresolved terms. Draft negotiation or clarification messages when requested, using truthful evidence and preserving the actual deadline. Never invent another offer or imply a commitment the candidate has not made.
-
-Comparison or drafting grants no permission to send, accept, sign, decline, withdraw other applications or resign. Execute external actions only under the user's specific authorization and the environment's controls. Record confirmed offer events and the candidate's actual decision in the owning tracker when authorized; recommendations and drafts are not acceptance. Record authorized sends in the mapped outreach record before reporting completion.
+Coaching or drafting does not authorize sending, accepting, signing, declining, withdrawing or resigning. Reuse specific existing authorization within scope and the environment's controls. Record confirmed events and actual decisions in the owning tracker when authorized; hypothetical packages create no offer stage. Record authorized sends in the mapped outreach record before reporting completion. End with the next useful question, rehearsal or decision.

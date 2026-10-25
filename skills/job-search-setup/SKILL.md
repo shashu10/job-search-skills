@@ -5,7 +5,11 @@ description: Set up a private job-search workspace or map an existing search to 
 
 # Set up a job search
 
-Create enough structure to pursue suitable interviews without turning preparation into the objective. Keep candidate data separate from the public skill package.
+Create enough structure to pursue suitable interviews without turning preparation into the objective. Keep candidate data separate from the public skill package. Setup supports the search; it is not a prerequisite for standalone coaching or work from supplied materials.
+
+## Start with the user's request
+
+Introduce four entry points: **Find Jobs Worth Applying For** (`job-research`), **Find Referrals** (`recruiting-outreach`), **Interview Coach** (`job-interview`) and **Offer Negotiator** (`job-offer`). Interview coaching needs no booked round; compensation and negotiation coaching needs no existing offer. Let users describe their problem naturally. Resume work, applications, inbox reconciliation and scheduling support these requests when needed and authorized; users need not invoke every skill themselves.
 
 ## Choose the workspace
 
@@ -21,7 +25,7 @@ Keep facts with their source, confirmation date and precision in `references/pro
 
 ## Establish loading and record ownership
 
-Keep the private `AGENTS.md` short: standing boundaries, source mapping and when to load each installed skill/reference. Read [recordkeeping](assets/workspace/references/recordkeeping.md) when choosing tracker fields. Start with a single `roles/applications.md`; use `roles/INDEX.md` to map additional lanes and owners only if necessary. Use one outreach record, linked from relevant applications.
+Keep the private `AGENTS.md` short: standing boundaries, source mapping and when to load each installed skill/reference. Read [recordkeeping](assets/workspace/references/recordkeeping.md) when choosing tracker fields. Start with a single `roles/applications.md`, including shortlist decisions and proposed routes; use `roles/INDEX.md` to map additional lanes and owners only if necessary. Use one outreach record, linked from relevant applications. Interest or a pursue decision does not itself grant submission permission; reuse actual grants within scope.
 
 Reuse existing resume sources and templates; record usable variants in `resumes/INVENTORY.md`. Preserve submitted versions and receipts. Use `job-resume` when available for evidence gathering, feedback and material changes; setup need not rebuild materials. If that skill is unavailable, use the workspace's existing document workflow.
 

@@ -10,6 +10,8 @@ Record submission evidence, exact submitted material/version, current stage, eve
 
 Preserve an append-only event history under each role when the stage changes. Keep original submission evidence after rejection or progression. A corrected resume is for new use; preserve the file actually sent.
 
+For sourced roles, record the candidate's unreviewed/pursue/pass/hold decision separately from your recommendation and employer stage. Retain its date, reason, proposed application/referral route and any applicable grant link. Interest does not authorize submission or messaging. Move the role's current row as it progresses, preserving its decision history; a shortlist is part of the owning tracker, not another ledger.
+
 ## Stages
 
 | State | Minimum evidence / interpretation |

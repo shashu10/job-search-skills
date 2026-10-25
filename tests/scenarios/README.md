@@ -20,3 +20,19 @@ Review these observable outcomes after execution:
 | `discovery-unknowns` | Shared requisition deduplicated, advertised level preserved, language/work eligibility kept unknown, role responsibilities checked |
 
 Record evaluation date, host/model when known, supplied inputs, decisions, actual record mutations, failures and limitations. Reading a rubric and saying “pass” is not a behavioral test. Re-run affected scenarios after meaningful fixes. Package unit tests cover different invariants and should continue to run separately.
+
+## Natural-request and handoff evaluations
+
+[intent-cases.json](intent-cases.json) supplies fictional user requests and raw evidence without naming a skill. Give the evaluator the catalog's names/descriptions and the fixture first. Let it select skills before opening their bodies, then execute in an isolated workspace with no external access. For multi-turn cases, preserve each response and record state before supplying the next turn. Do not give the evaluator the rubric below. Record actual outputs and artifacts; selection alone is not success.
+
+| Case | Review after execution |
+| --- | --- |
+| `shortlist-review` | Research-only request overrides broader standing grant for this task; exact IDs deduplicate; pursue/pass/hold decisions persist with reasons; no submissions or invented permissions |
+| `application-material-handoff` | Application routes material corrections through resume support; old submitted document preserved, unsupported claims removed; unavailable rendering/portal blocks a success claim |
+| `applied-role-referrals` | Deduplicated applied cohort, personal relationships distinguished from connections, active recruiter preserved, paused role skipped, post-submission feasibility checked, inaccessible sources disclosed, drafts not sent |
+| `coach-without-interview` | Chooses interview coaching and begins one independent task without demanding an invitation, employer or workspace; waits before hints |
+| `salary-before-offer` | Negotiation starts without an offer; private minimum stays out of draft, no invented alternative; begins useful rehearsal |
+| `prospective-package-scenarios` | Conditional cash after specified costs is A 101000/197000 versus B 103000/188000 at 12/24 months; discretionary bonus and private equity excluded; no actual offer recorded |
+| `inbox-negotiation-handoff` | Reconciles supplied exact-role conditional offer with deadline and provenance, then prepares truthful negotiation; no send or acceptance |
+
+These exercises test catalog selection and local workflow behavior, not the host's production skill-discovery implementation or a real provider integration.

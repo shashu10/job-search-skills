@@ -1,6 +1,6 @@
 interface:
-  display_name: "Job Research"
-  short_description: "Discover companies and verify suitable job matches"
-  default_prompt: "Use $job-research to discover relevant employers and rank verified openings using my private job-search workspace."
+  display_name: "Find Jobs Worth Applying For"
+  short_description: "Find worthwhile jobs and review a ranked shortlist"
+  default_prompt: "Use $job-research to find jobs worth applying for and give me a shortlist to review as pursue, pass or hold."
 policy:
   allow_implicit_invocation: true

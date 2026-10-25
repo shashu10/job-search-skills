@@ -1,12 +1,12 @@
 # Product and release plan
 
-Updated 25 October 2026 for v0.2.0. This replaces the earlier six-skill pilot proposal. The [README](../README.md) is the current capability reference.
+Updated 25 October 2026 for v0.3.0. The [README](../README.md) is the current capability reference.
 
-## v0.2.0: the complete skill package
+## v0.3.0: four entry points, ten supporting workflows
 
-Ship ten focused workflows: setup, resume, research, outreach, application, interview, offer, inbox, pipeline review and requested scheduling. Keep private facts and live records outside the public package. Include blank templates, a Python initializer, a fictional walkthrough, decision scenarios, validation notes and an MIT license.
+Lead with Find Jobs Worth Applying For, Find Referrals, Interview Coach and Offer Negotiator. Preserve the ten stable workflow IDs: setup, resume, research, outreach, application, interview, offer, inbox, pipeline review and requested scheduling. Keep private facts and live records outside the public package. Include blank templates, a Python initializer, a fictional walkthrough, decision scenarios, validation notes and an MIT license.
 
-The inbox and scheduling skills instruct the user's agent how to use available capabilities; they do not bundle a mailbox connector or scheduler. Offer evaluation uses supplied terms and current primary evidence when needed. Resume preparation uses available document tooling; no personal template or new renderer is included.
+Sourcing produces a reviewable shortlist. Explicit authorization starts applications and any necessary resume work. Referral research can sweep the applied-role cohort while preserving existing conversations. Interview coaching and compensation discussions can start before an invitation or offer. Inbox and scheduling use available host tools; they do not bundle connectors or a scheduler. Resume preparation uses available document tooling; no personal template or new renderer is included.
 
 ## Next: records and optional UI
 
@@ -20,13 +20,13 @@ Introduce editing only after choosing one authoritative record representation an
 
 ## Demonstrate continuity
 
-Use one fictional journey in the article, README and short recording: confirmed experience → reviewed resume → suitable role → routing decision → application evidence → practice → debrief → targeted retry. Show a factual correction and a changed referral route. Label interface concepts and fixture evidence; demonstrate only implemented capabilities.
+Use one fictional journey in the article, README and short recording: source → review → authorize → select or tailor resume → application evidence → referral route → practice → feedback → retry → compensation discussion. Also demonstrate that coaching works independently. Label interface concepts and fixture evidence; demonstrate only implemented capabilities.
 
 Start with experienced engineers already using coding agents. Observe 5–10 users completing setup and a role workflow. Measure time to a useful brief, repeated questions, corrections caught and whether a returning user can identify the next action without reconstructing old chats. Hiring outcomes require dated cohorts and cannot establish causation alone.
 
 ## Positioning and distribution
 
-Suggested headline: **Run your job search with the AI agent you already use.**
+Suggested headline: **Find worthwhile jobs, find referrals, practice interviews and negotiate offers with the AI agent you already use.**
 
 Lead with connected context, inspectable records and useful next steps. Open source, local storage and agent skills already appear in related projects; avoid first/only claims or unsupported promises of better hiring outcomes. The [fictional walkthrough](../examples/walkthrough.md) should make the benefit tangible.
 

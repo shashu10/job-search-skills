@@ -1,0 +1,304 @@
+{
+  "release": "v0.3.0",
+  "evaluation_date": "2026-10-25",
+  "host": "Codex desktop, two independent subagents",
+  "model_id": "Exact model identifier unavailable to evaluators",
+  "fictional": true,
+  "method": "Evaluators received the natural requests and raw fixtures without the rubric, selected from all ten catalog descriptions before reading chosen skill bodies, and executed in isolated workspaces. The release coordinator inspected actual responses and persisted artifacts. Temporary capture paths are omitted; response text and selected artifact content are retained.",
+  "limits": "One execution per case. No production host auto-discovery test, live provider, real submission or send. Interactive coaching stopped for candidate input; no learning outcome is claimed. Earlier v0.2.0 scenarios were not rerun.",
+  "cases": [
+    {
+      "id": "shortlist-review",
+      "selected_skills": [
+        "job-research"
+      ],
+      "actual_responses": [
+        {
+          "turn": 1,
+          "response": "EX-101 is the strongest match. EX-103 is worth keeping on hold until the working language is confirmed.\n\n| Role | Recommendation | Why / remaining gap |\n|---|---|---|\n| [Example Systems — Product Engineer, EX-101](https://jobs.example.invalid/EX-101) | Pursue | Product UI and ordinary APIs fit your confirmed experience. Example Region, English working language and employer work-authorization support are explicit. |\n| [Example Studio — Product Engineer, EX-103](https://jobs.example.invalid/EX-103) | Hold | Relevant product work and authorization support are confirmed; working language is unknown. |\n| [Example Tools — Infrastructure Engineer, EX-102](https://jobs.example.invalid/EX-102) | Pass | Mostly model-serving operations, with little alignment to your product-engineering target. Language and authorization support are also unconfirmed. |\n\nAll three levels are unlisted. I counted the duplicate EX-101 listing once. These judgments use only the supplied snapshots checked June 10, 2030; full requirements were not provided.\n\nSaved the shortlist in `roles/research/snapshot-shortlist.md`. No applications were made, despite the standing daily grant. These remain recommendations: you can choose pursue, pass or hold for each role.\n"
+        },
+        {
+          "turn": 2,
+          "response": "Recorded all three decisions in `roles/applications.md`:\n\n- **Pursue EX-101** — retained for the application stage.\n- **Pass EX-102** — mostly infrastructure; marked user-skipped.\n- **Hold EX-103** — pending confirmation of the working language.\n\nNo applications were submitted. The original shortlist and decision history are preserved.\n"
+        }
+      ],
+      "selected_artifacts": [
+        {
+          "relative_path": "roles/applications.md",
+          "content": "# Applications and role decisions\n\nScenario as-of date: 2030-06-10. Decisions below are from the user's second turn; no separate instruction date was supplied.\n\n| Employer | Exact role | User decision | Reason / condition | Application stage | Next action |\n|---|---|---|---|---|---|\n| Example Systems | EX-101 — Product Engineer | Pursue | User selected the strongest product UI / balanced APIs match. | Not applied | Retain for an application-execution request; this task remains research and decision recording only. |\n| Example Tools | EX-102 — Infrastructure Engineer | Pass / user-skipped | User: “because it is mostly infrastructure.” | Not applied | Exclude from active pursuit; do not reopen without changed instruction. |\n| Example Studio | EX-103 — Product Engineer | Hold | User: “until we know the working language.” | Not applied | Verify actual working language; keep held until the uncertainty is resolved. |\n\nDecision source: user turn 2, “Pursue EX-101, pass EX-102 because it is mostly infrastructure, and hold EX-103 until we know the working language. Record those decisions.”\n\nResearch evidence: roles/research/snapshot-shortlist.md; supplied employer snapshots checked 2030-06-10. Canonical roles: https://jobs.example.invalid/EX-101, https://jobs.example.invalid/EX-102, https://jobs.example.invalid/EX-103. The second EX-101 board listing is the same requisition.\n\n## Authority and totals\n\nJune 1 standing grant remains on record: at most two qualifying applications per day, no employer exceptions. The current task's “do not apply” scope remains in effect. Pursue records interest and does not change that scope. No messages were authorized or sent.\n\nUnique reviewed roles: 3. Confirmed submissions: 0. Current decisions: pursue 1, pass 1, hold 1.\n\n## Preserved history\n\nInitial supplied snapshot: no prior applications or role decisions. Turn 1 produced recommendations only (pursue EX-101, pass EX-102, hold EX-103); turn 2 confirmed the user's decisions.\n"
+        },
+        {
+          "relative_path": "roles/research/snapshot-shortlist.md",
+          "content": "# Snapshot shortlist — 2030-06-10\n\nScope: supplied fictional employer snapshots only; no live search, applications or contact research. Three unique requisitions were reviewed. The second EX-101 listing is a duplicate, not a fourth opportunity. Levels are unlisted for all three roles; no seniority inferred.\n\n| Priority | Role | Fit and evidence | Gaps | Recommendation | Proposed next route |\n|---|---|---|---|---|---|\n| 1 | Example Systems — Product Engineer — [EX-101](https://jobs.example.invalid/EX-101), Example Region | Product UI and ordinary application APIs align with confirmed UI and balanced full-stack experience. Opening, English working language and employer work-authorization support are explicit in the supplied employer snapshot. | Advertised level is unlisted; full qualifications and application form are not supplied. | Pursue for review | Employer's EX-101 route if application execution is requested within the existing grant; no existing contact or referral hold. |\n| 2 | Example Studio — Product Engineer — [EX-103](https://jobs.example.invalid/EX-103), Example Region | Relevant product work, current opening and employer authorization support are explicit in the supplied employer snapshot. | Working language unknown; English is required by candidate preferences. Level and full qualifications unlisted. | Hold pending language evidence | Verify the team's actual working language from employer evidence before qualifying for application. |\n\n## Screened out\n\n[Example Tools EX-102 — Infrastructure Engineer](https://jobs.example.invalid/EX-102), Example Region: mostly model-serving operations, a poor match for the candidate's product-engineering target and supported UI experience. Recommend pass. Working language and work-authorization support are not established by the supplied EX-102 snapshot; advertised level is unlisted.\n\n## Evidence and authority\n\nSource: references/supplied-evidence.json, fictional employer snapshots checked 2030-06-10. EX-101 has a duplicate board listing but is counted once by employer/requisition. There are no prior submissions, role decisions, contacts or route holds. Candidate owns the workflow editor frontend, not its backend service; no revenue metric is used.\n\nThese are recommendations, not user decisions. The current request is research-only and overrides execution under the June 1 standing grant for this task. No application or message was sent. Live role and decision state remains in roles/applications.md.\n"
+        }
+      ],
+      "limitations": [
+        "Fictional supplied employer snapshots only; no live verification or full requirements available.",
+        "All advertised levels unlisted. EX-103 working language remains unknown.",
+        "Research-only scope retained despite earlier standing application grant and later pursue decision."
+      ],
+      "observed_mutations": [
+        {
+          "turn": 1,
+          "computed_file_changes": {
+            "created": [
+              "roles/research/snapshot-shortlist.md"
+            ],
+            "modified": [],
+            "deleted": []
+          },
+          "action_record": {
+            "created": [
+              "roles/research/snapshot-shortlist.md"
+            ],
+            "modified": [],
+            "submissions": 0,
+            "sends": 0,
+            "decisions": "recommendations only"
+          }
+        },
+        {
+          "turn": 2,
+          "computed_file_changes": {
+            "created": [],
+            "modified": [
+              "roles/applications.md"
+            ],
+            "deleted": []
+          },
+          "action_record": {
+            "created": [],
+            "modified": [
+              "roles/applications.md"
+            ],
+            "submissions": 0,
+            "sends": 0,
+            "decision_source": "User turn 2",
+            "decisions": {
+              "EX-101": "pursue",
+              "EX-102": "pass/user-skipped",
+              "EX-103": "hold pending working-language evidence"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "application-material-handoff",
+      "selected_skills": [
+        "job-application",
+        "job-resume"
+      ],
+      "actual_responses": [
+        {
+          "turn": 1,
+          "response": "I prepared a corrected editable experience draft for EX-101:\n\n> Designed workflow editor interactions and implemented the frontend.\n\nThe draft removes the unsupported whole-platform ownership and 40% revenue claims. The historical v1 excerpt remains unchanged. I recorded the new draft and its source review in the resume inventory.\n\n**EX-101 is not submitted.** The available source contains only an experience excerpt, so the draft is a partial resume section. There is no document renderer, application browser/portal or inbox access. I could not build and visually verify a final PDF, complete the form or obtain a submission receipt.\n\nFiles: `resumes/drafts/corrected-experience-v2.md` and `resumes/drafts/corrected-experience-v2-evidence.md`. The tracker records the prepared material and blockers. The next step is to integrate this into the full resume and execute through the employer portal when those resources are available; your existing exact-role approval is sufficient.\n"
+        }
+      ],
+      "selected_artifacts": [
+        {
+          "relative_path": "resumes/INVENTORY.md",
+          "content": "# Resume inventory\n\n| Source | Format | Status | Intended use |\n|---|---|---|---|\n| archive/v1-submitted-excerpt.md | Markdown transcription of supplied v1 excerpt | Immutable; previously submitted to a different, unspecified role. Actual submission date and full file unavailable. Material claims now corrected. | Historical evidence only; do not reuse for EX-101 |\n\n| drafts/corrected-experience-v2.md | Editable Markdown | New corrected experience draft; factual text checked against profile; incomplete full resume; visual verification unavailable | Future EX-101 materials; not uploaded or submitted |\n\nv2 source revision: supplied corrected profile, replacing the inaccurate v1 experience claim for future use. Review provenance and claim map: drafts/corrected-experience-v2-evidence.md. No full resume, PDF or final rendered format exists in this evidence set. v1 is unchanged and retains its historical submission context.\n"
+        },
+        {
+          "relative_path": "resumes/drafts/corrected-experience-v2-evidence.md",
+          "content": "# v2 evidence and review\n\nPurpose: corrected experience source for the authorized Example Systems EX-101 Product Engineer application. Editable Markdown draft only. The available evidence contains one earlier resume excerpt, not a complete resume or approved visual template.\n\n| Material claim | Evidence | Revision |\n|---|---|---|\n| Workflow editor interaction design | Corrected profile: “workflow editor interaction design” | Included as “Designed workflow editor interactions.” |\n| Frontend implementation | Corrected profile: “frontend implementation” | Included as “implemented the frontend.” |\n| Entire-platform ownership | Corrected profile limits ownership; another team owned backend persistence | Removed from future draft; historical v1 preserved. |\n| 40% revenue increase | Corrected profile: “No measured revenue result.” | Removed from future draft; no replacement metric invented. |\n\nNo role title, employer, dates, technology stack, seniority, backend ownership, business metric or broader career history was inferred. The employer's balanced-API emphasis does not establish candidate backend experience.\n\nSource revision: raw scenario's corrected profile plus immutable v1 excerpt, snapshot date not supplied. Text review completed against those two sources. No PDF/document renderer exists, so no rendered artifact, page inspection, extracted-text or reading-order verification was performed. This is a partial experience section; a complete resume source and document rendering are required for a final resume. No material was uploaded or submitted.\n"
+        },
+        {
+          "relative_path": "resumes/drafts/corrected-experience-v2.md",
+          "content": "# Experience\n\n## Workflow editor\n\n- Designed workflow editor interactions and implemented the frontend.\n"
+        },
+        {
+          "relative_path": "roles/applications.md",
+          "content": "# Application tracker\n\n## Example Systems — EX-101 — Product Engineer\n\nLocation: Example Region. Advertised level: not supplied.\n\nStage: materials partly prepared; execution blocked; **not submitted**.\n\nAuthority: current exact-role grant authorizes submission. No new submission approval is needed. No prior EX-101 submission, referral hold or contact route exists in the supplied records. The unrelated role's historical v1 submission does not create an EX-101 submission.\n\nRole evidence: supplied employer snapshot confirms availability, location, language and employer authorization support. Duties emphasize product UI and balanced APIs. Snapshot date and application portal URL were not supplied. No portal or form was opened.\n\nPrepared material: resumes/drafts/corrected-experience-v2.md, editable Markdown experience section. Claim review: resumes/drafts/corrected-experience-v2-evidence.md. Replaced whole-platform ownership and the unmeasured 40% revenue claim with confirmed workflow editor interaction design and frontend implementation. Another team owned backend persistence. The historical v1 excerpt remains unchanged in resumes/archive/v1-submitted-excerpt.md.\n\nExecution blockers: no PDF/document renderer; no browser/application portal or inbox provider. Only an excerpt of v1 and corrected contribution were supplied, so the full resume cannot be assembled from present evidence. No application fields, final attachment or declarations could be reviewed. No upload or submission was attempted. No receipt exists.\n\nSubmitted resume: none. Submission date: none. Preparation recorded during this synthetic run; source/event date for preparation not supplied. Confirmed EX-101 submissions: 0.\n\nNext action: obtain the existing full resume source, integrate the corrected experience, render and inspect the final document, then access the verified employer application route and complete required fields from confirmed facts. Reuse the current exact-role submission grant. Record submission only after evidence from the portal or receipt is available.\n"
+        }
+      ],
+      "limitations": [
+        "Local Markdown only; no document/PDF renderer, browser/application portal or inbox provider.",
+        "Only historical v1 wording excerpt supplied, so output is a corrected experience section, not an invented complete resume.",
+        "No rendered-page, PDF-text or reading-order verification; no upload, submission or receipt."
+      ],
+      "observed_mutations": [
+        {
+          "turn": 1,
+          "computed_file_changes": {
+            "created": [
+              "resumes/drafts/corrected-experience-v2-evidence.md",
+              "resumes/drafts/corrected-experience-v2.md"
+            ],
+            "modified": [
+              "resumes/INVENTORY.md",
+              "roles/applications.md"
+            ],
+            "deleted": []
+          },
+          "action_record": {
+            "created": [
+              "resumes/drafts/corrected-experience-v2.md",
+              "resumes/drafts/corrected-experience-v2-evidence.md"
+            ],
+            "modified": [
+              "resumes/INVENTORY.md",
+              "roles/applications.md"
+            ],
+            "historical_v1_sha256_before": "0d88bcf83ed38f638f1814e45d7581a216a5991a538663f27de37f796173abb1",
+            "historical_v1_sha256_after": "0d88bcf83ed38f638f1814e45d7581a216a5991a538663f27de37f796173abb1",
+            "submissions": 0,
+            "uploads": 0,
+            "sends": 0,
+            "rendered_files": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "applied-role-referrals",
+      "selected_skills": [
+        "recruiting-outreach"
+      ],
+      "actual_responses": [
+        {
+          "turn": 1,
+          "response": "There are **three unique applications**; the historical EX-201 duplicate is counted once. EX-201 has the strongest referral route.\n\n| Application | Route and next step |\n|---|---|\n| **Example Systems EX-201** — submitted June 1 | Ask **Contact P**, your former teammate now on the relevant team. The supplied employer guidance allows an employee referral to attach to an existing application. Retrieve the existing application ID for that process; EX-201 is the requisition ID. P's willingness to refer is unknown. |\n| **Example Tools EX-202** — submitted June 2 | Stay with **Contact R**, who already handles your application; you last replied June 7. The employer does not allow post-submission referral association. Contact C is only a first-degree connection with unrelated work; public hiring manager Contact H is relevant, but a hiring-team conversation should be coordinated through R. Check the existing thread before deciding on a follow-up. |\n| **Example Studio EX-203** — submitted June 3 | Keep all contact paused under your June 8 instruction. No outreach proposed. |\n\n**Draft to P — not sent**\n\n> Hi P — I applied to Example Systems' EX-201 role on June 1. Since we worked together and you're now on the relevant team, would you be comfortable supporting my application with an employee referral? My experience includes product UI and workflow editor features. The company's process allows a referral to be associated with an existing application, so I'd use that route. Thanks for considering it.\n\n**Possible draft to R — not sent; check the existing thread first**\n\n> Hi R — I'm checking in on my EX-202 application at Example Tools. Is there any additional context about my product UI and workflow editor work that would help the team's review? If a conversation with the hiring team would be useful, I'd be happy to coordinate through you.\n\nI reviewed the supplied contact export, existing recruiter record and June 10 public snapshots. Live contacts, LinkedIn, X and email were unavailable, so this does not cover your full network. P's channel and existing application ID, and R's original thread, remain missing. I saved the routes and drafts in `outreach/contacts.md`; no messages were sent and no referrals are recorded as completed.\n"
+        }
+      ],
+      "selected_artifacts": [
+        {
+          "relative_path": "outreach/contacts.md",
+          "content": "# Outreach record\n\nSource dates are supplied June dates; year not supplied.\n\n## Existing records\n\n- Contact R — Example Tools EX-202. Existing recruiter handling this application. Candidate last replied June 7. Original thread unavailable.\n- Example Systems EX-201 — no previous outreach.\n- Example Studio EX-203 — user paused all contact June 8; active.\n\n## Supplied contact export\n\n- Contact P: known former teammate, now on the relevant Example Systems team.\n- Contact C: first-degree Example Tools connection, no conversation history; work unrelated to the opening.\n\n## Current public-source snapshots (June 10)\n\n- Example Systems permits employee referral association after submission using the existing application ID.\n- Example Tools does not support post-submission referral association.\n- Contact H is a current relevant hiring manager at Example Tools with a public hiring post.\n\nNo sending grants. No additional contact details or application IDs beyond requisition IDs supplied.\n\n## Referral sweep — supplied snapshots dated June 10\n\nCohort: three unique submitted requisitions. The historical duplicate EX-201 row is retained in the application source but counted once. All three applications are accounted for below; application stages remain unchanged in roles/applications.md.\n\n| Exact role / supplied application date | Recommended route | Contact and relationship evidence | Post-submission feasibility | Existing conversation / hold | Next action |\n|---|---|---|---|---|---|\n| Example Systems EX-201 — June 1 | Ask known former teammate about an employee referral associated with the existing application | Contact P, known former teammate now on the relevant team; user-supplied contact export. No prior EX-201 outreach. Hiring authority and willingness to refer not established. | Supported by the supplied June 10 employer guidance; requires the existing application ID, which is missing here. EX-201 is a requisition ID, not that application ID. | No recorded contact route or hold | Review draft below; retrieve existing application ID and confirm the contact channel if proceeding. Do not create or resubmit an application. |\n| Example Tools EX-202 — June 2 | Continue through existing recruiter; no new formal referral attempt | Contact R already handles EX-202; candidate last replied June 7. Contact C is first-degree only, unrelated to the opening and has no conversation history. Contact H is a relevant current hiring manager with a public hiring post. | Employer guidance explicitly rules out post-submission referral association. Team context or a recruiter-coordinated hiring-team conversation may still be useful; no such introduction is confirmed. | Active recruiter route. Original thread unavailable. | Read the existing thread before deciding whether a follow-up is due. Keep C and H as assessed alternatives; do not approach either in parallel or bypass R. Provisional R draft below requires thread review. |\n| Example Studio EX-203 — June 3 | Hold; no contact request | No usable contact supplied; further discovery not needed while all contact is paused. | Not assessed; do not infer employer policy | User paused all contact June 8; remains active | Leave paused unless the user changes the instruction. No outreach draft or external search for this role. |\n\n### Contact P — review draft, NOT SENT\n\nPurpose: request referral support for the existing Example Systems EX-201 application. Relationship: former teammate. Origin: user-supplied export. Channel: not supplied. Introduction chain: direct known contact; no introduction or referral completed.\n\n> Hi P — I applied to Example Systems' EX-201 role on June 1. Since we worked together and you're now on the relevant team, would you be comfortable supporting my application with an employee referral? My experience includes product UI and workflow editor features. The company's process allows a referral to be associated with an existing application, so I'd use that route. Thanks for considering it.\n\nExecution notes: no send grant; contact address/channel is unavailable. Existing application ID must be retrieved for the employer's association process; do not substitute EX-201. No resume attachment was selected or promised because no resume inventory was supplied in this case.\n\n### Contact R — provisional review draft, NOT SENT\n\nPurpose: continue the existing EX-202 conversation, not obtain a post-submission formal referral. Channel: existing thread, provider/channel unspecified. Relationship: active recruiter handling the application. Last known candidate reply: June 7. No new inbound reply or send is inferred.\n\n> Hi R — I'm checking in on my EX-202 application at Example Tools. Is there any additional context about my product UI and workflow editor work that would help the team's review? If a conversation with the hiring team would be useful, I'd be happy to coordinate through you.\n\nThis wording is provisional because the original thread is unavailable. Check its promises, requested information and timing before using the draft; the elapsed time alone does not establish that another message is due. No direct draft to C or H is recommended while R owns the active conversation.\n\n### Coverage and source limits\n\n- Known relationships checked: supplied export's Contact P and supplied existing recruiter record R.\n- Connections checked: supplied export's Contact C only; first-degree status is not evidence of personal acquaintance or referral readiness.\n- Public hiring evidence checked: supplied June 10 Contact H hiring snapshot and the two employer referral-policy snapshots. No URLs, addresses, verbatim post or live profiles were supplied.\n- Unchecked: the rest of the candidate's personal contacts, live connection graph, LinkedIn, X, email threads and other public search results. No live search capability was available; absence of further records does not prove no contact exists.\n- New actions: research recorded and two drafts prepared; 0 sends, 0 introductions, 0 completed referrals, 0 new submissions. No contact or application stage advanced because of this research.\n"
+        }
+      ],
+      "limitations": [
+        "Only supplied export, existing recruiter record and June 10 public snapshots checked. Live contacts, LinkedIn, X, email and wider network unchecked.",
+        "EX-201 existing application ID and Contact P channel not provided. P willingness and hiring authority not established.",
+        "EX-202 original recruiter thread unavailable; follow-up draft provisional and no cadence inferred.",
+        "EX-203 contact pause preserved. No messages sent, introductions or referrals completed."
+      ],
+      "observed_mutations": [
+        {
+          "turn": 1,
+          "computed_file_changes": {
+            "created": [],
+            "modified": [
+              "outreach/contacts.md"
+            ],
+            "deleted": []
+          },
+          "action_record": {
+            "created": [],
+            "modified": [
+              "outreach/contacts.md"
+            ],
+            "application_tracker_changed": false,
+            "unique_applications_reviewed": 3,
+            "drafts": 2,
+            "sends": 0,
+            "referrals_completed": 0,
+            "introductions": 0,
+            "hold_preserved": "EX-203 all contact paused June 8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "coach-without-interview",
+      "selected_skills": [
+        "job-interview"
+      ],
+      "actual_responses": [
+        {
+          "turn": 1,
+          "response": "Let’s use 20 minutes, starting with your independent attempt.\n\nDesign a service that runs workflows by calling external tools. For this exercise, assume 1,000 concurrent workflows; workers can crash, and tool calls can time out. How would you design recovery and retries so workflows can continue safely?\n\nStart by stating your requirements and assumptions, then walk me through your design. I’ll wait for your answer before giving hints."
+        }
+      ],
+      "selected_artifacts": [],
+      "limitations": [
+        "Used only the supplied fictional evidence. No external accounts, network research, messages, applications or schedules.",
+        "Stopped after one practice question for candidate input; no answer, hints, performance assessment or completed 20-minute session was fabricated.",
+        "No persistent candidate workspace or learning record was created. The files here are evaluator captures only."
+      ]
+    },
+    {
+      "id": "salary-before-offer",
+      "selected_skills": [
+        "job-offer"
+      ],
+      "actual_responses": [
+        {
+          "turn": 1,
+          "response": "Your target fits within the employer’s stated 100,000–130,000 range. You can send:\n\n> For annual base, I’m targeting 120,000–125,000, depending on the scope of product ownership. Team quality is also important to me, and I’d welcome a discussion of the role and overall package.\n\nThis states your target without revealing your private minimum or committing you to accept. No competing-offer claim is needed.\n\nLet’s rehearse one turn. **Hypothetical recruiter:** “We were thinking closer to 110,000 annual base. Would that work for you?”\n\nReply as yourself; I’ll give feedback after your answer."
+        }
+      ],
+      "selected_artifacts": [],
+      "limitations": [
+        "Used only the supplied fictional evidence. No external accounts, network research, messages, applications or schedules.",
+        "Stopped at the first hypothetical recruiter pushback for candidate input. No rehearsal response or employer outcome was invented.",
+        "No actual offer or workspace stage was created. Private minimum omitted from outward-facing draft."
+      ]
+    },
+    {
+      "id": "prospective-package-scenarios",
+      "selected_skills": [
+        "job-offer"
+      ],
+      "actual_responses": [
+        {
+          "turn": 1,
+          "response": "Using the listed base and sign-on estimates, **B is ahead by 2,000 over 12 months; A is ahead by 9,000 over 24 months**, after housing and moving costs and before tax.\n\nThese are prospective scenarios, not offers. All figures are fictional currency units. This assumes full employment from day one, evenly paid base, sign-on at the start, recurring monthly housing, and one moving payment.\n\n| Listed cash and costs | A: 12 months | B: 12 months | A: 24 months | B: 24 months |\n|---|---:|---:|---:|---:|\n| Base | 120,000 | 115,000 | 240,000 | 230,000 |\n| One-time sign-on | 10,000 | 20,000 | 10,000 | 20,000 |\n| Housing | −24,000 | −30,000 | −48,000 | −60,000 |\n| One-time moving cost | −5,000 | −2,000 | −5,000 | −2,000 |\n| **Cash after listed costs** | **101,000** | **103,000** | **197,000** | **188,000** |\n\nFormula: `annual base × months / 12 + sign-on − monthly housing × months − moving cost`.\n\nA has 96,000 in annual base after housing, versus B’s 85,000. That recurring 11,000 advantage eventually outweighs B’s larger upfront net cash. Neither sign-on nor moving costs are repeated in year two.\n\n**Bonus is separate.** A’s 20,000 target is discretionary; its cadence and payment dates are not supplied. B’s bonus is unspecified, not known to be zero. If A paid 20,000 once by month 12 and again by month 24, its totals would be 121,000 and 237,000. Against B’s listed-cash baseline, those are leads of 18,000 and 49,000, but that illustration assumes those payouts and excludes any unknown B bonus. More generally, A needs over 2,000 more bonus cash than B to lead at 12 months; B needs over 9,000 more than A to lead at 24 months.\n\n**Private equity stays outside cash.** A’s 50,000 is an illiquid paper quote, with instrument, vesting and realization terms unknown. It contributes no spendable cash to these scenarios. B’s equity is unspecified. Do not double A’s paper quote for the 24-month horizon.\n\nThis covers only the listed pay, housing and moving costs. Taxes, other living expenses, benefits, raises and any unknown terms are excluded, so it is not a complete savings forecast."
+        }
+      ],
+      "selected_artifacts": [],
+      "limitations": [
+        "Used only the supplied fictional evidence. No external accounts, network research, messages, applications or schedules.",
+        "Bonus cadence and payment timing are unknown; the optional payout scenario states explicit assumptions. B bonus/equity remain unknown.",
+        "No tax or market data used; no offer stage created."
+      ],
+      "arithmetic_check": {
+        "12_months": {
+          "a": 101000,
+          "b": 103000,
+          "b_lead": 2000
+        },
+        "24_months": {
+          "a": 197000,
+          "b": 188000,
+          "a_lead": 9000
+        },
+        "method": "Executed Python arithmetic using supplied inputs."
+      }
+    },
+    {
+      "id": "inbox-negotiation-handoff",
+      "selected_skills": [
+        "job-inbox",
+        "job-offer"
+      ],
+      "actual_responses": [
+        {
+          "turn": 1,
+          "response": "Updated the private exercise records for **Example Systems EX-301** to **written conditional offer, subject to reference checks**, preserving the earlier submission and completed final interview. The source is DEMO-OFFER-1, dated June 10; its excerpt is the full available evidence. Annual base is 110,000 fictional units; other compensation terms remain unknown.\n\nThe recorded reply deadline is **June 15 at 17:00 UTC**. The source does not specify a year, so I cannot establish whether it is upcoming or expired. Nothing was sent or accepted.\n\nYour proposed counter is **120,000 annual base**, a 10,000 increase, approximately 9.1%. Here is the draft:\n\n> Thank you for the written offer for EX-301. Would you be able to increase the annual base to 120000 fictional currency units?\n>\n> Product ownership is an important part of my decision, so I would also appreciate clarification of the role’s product scope. Please share the remaining compensation terms and the next steps for the reference checks so I can review the full package.\n\nIf base cannot move, ask what flexibility exists in sign-on, a defined salary review, or role scope before making a concession. No competing-offer claim or unsupported market benchmark is needed. Confirm the full terms and deadline year before making a decision.\n\nSaved the application update, message provenance and clearly marked unsent draft in the exercise workspace. No live inbox was checked."
+        }
+      ],
+      "selected_artifacts": [
+        {
+          "relative_path": "roles/applications.md",
+          "content": "# Applications\n\n## Example Systems — EX-301\n- Current stage: written conditional offer; reference checks are a condition, with completion not evidenced.\n- Prior confirmed history: application submitted; final interview completed. Event dates not supplied.\n- Prior record state: no offer recorded before the DEMO-OFFER-1 import.\n- Submission materials and receipt identifiers: not supplied in this exercise; prior submission remains confirmed.\n- Offer source/version: fictional DEMO-OFFER-1, message dated June 10 (year not supplied); [supplied excerpt](../inbox/supplied-message.md). The excerpt is all available evidence; attachment contents were not separately inspected.\n- Offer issue/event date: not separately stated; offer existence is evidenced by the June 10 message.\n- Annual base: 110000 fictional currency units, stated by the source.\n- Other compensation terms: not supplied; unknown, not zero.\n- Condition: reference checks. No evidence of satisfaction, acceptance or an unconditional offer.\n- Reply deadline: June 15 at 17:00 UTC; calendar year not supplied. Upcoming/expired status cannot be determined from this excerpt alone.\n- Legal employing entity, role title/level, work location and other contractual terms: not supplied.\n- Message received date: not supplied. Record updated: 2026-10-25 (exercise execution date, not an employer event date).\n- Next action: candidate review of the unsent 120000-base counteroffer draft; confirm full terms, product scope and the deadline year before deciding.\n- Conversation evidence: [DEMO-OFFER-1 import](../outreach/contacts.md#example-systems--ex-301).\n- Counteroffer: [draft only](../offers/EX-301-counteroffer-draft.md); not sent, not accepted.\n\n## Counts within this exercise workspace\n- Confirmed submitted applications: 1 (unchanged).\n- Applications with a completed final interview: 1 (unchanged; historical milestone).\n- Applications currently at written conditional offer: 1 (newly evidenced).\n- Accepted offers: 0 evidenced.\n"
+        },
+        {
+          "relative_path": "outreach/contacts.md",
+          "content": "# Contact and message record\n\n## Example Systems — EX-301\n- Source identifier: fictional DEMO-OFFER-1.\n- Sender: recruiter; name and contact details not supplied.\n- Channel: supplied recruiter-message excerpt; original delivery channel unspecified.\n- Message date: June 10 (year not supplied). Received date not supplied.\n- Evidence: [supplied message](../inbox/supplied-message.md) reports a written conditional offer, annual base 110000 fictional units, reference checks required, reply due June 15 at 17:00 UTC (year not supplied).\n- Reconciliation: matched the only supplied exact-role record, [Example Systems EX-301](../roles/applications.md#example-systems--ex-301); employer stage is authoritative there.\n- Candidate reply/send: none evidenced. Counteroffer is drafted only; no sending authority.\n- Next action: candidate review of the draft and clarification of full terms, product scope and deadline year.\n- Record updated: 2026-10-25 (exercise execution date).\n"
+        },
+        {
+          "relative_path": "offers/EX-301-counteroffer-draft.md",
+          "content": "# Example Systems EX-301 — counteroffer draft\n\nStatus: private draft, NOT SENT. This document is not an offer acceptance or an employer commitment.\nSource: [DEMO-OFFER-1](../inbox/supplied-message.md). Authoritative employer stage and deadline: [application record](../roles/applications.md#example-systems--ex-301).\n\nThank you for the written offer for EX-301. Would you be able to increase the annual base to 120000 fictional currency units?\n\nProduct ownership is an important part of my decision, so I would also appreciate clarification of the role's product scope. Please share the remaining compensation terms and the next steps for the reference checks so I can review the full package.\n\nThank you,\n[Your name]\n\n## Private preparation\n- Ask: 120000 annual base, 10000 above the stated 110000; approximately 9.1% higher.\n- Basis: the candidate's stated target and product-ownership preference. No market benchmark, competing offer or confirmed achievement has been supplied as additional leverage.\n- If base cannot move: ask what flexibility exists in sign-on, a defined future salary review, or role scope, then assess the actual response. No fallback amount or concession has been approved.\n- Other compensation terms are unknown. The deadline is June 15 at 17:00 UTC with year unspecified; do not infer that it is upcoming or that an extension has been granted.\n"
+        }
+      ],
+      "limitations": [
+        "Used only the supplied fictional evidence. No external accounts, network research, messages, applications or schedules.",
+        "No physical private workspace was supplied; a separate disposable fixture workspace was initialized from this case alone.",
+        "Message calendar year and actual offer issue date are unspecified. Source date and deadline were preserved without inventing a year.",
+        "Only the supplied excerpt was inspected; attachment text, legal entity, exact role title/level, location and other compensation terms were not supplied."
+      ]
+    }
+  ]
+}
