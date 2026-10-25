@@ -37,7 +37,7 @@ Already have a job-search folder? Ask the agent to use it. To try the workflow f
 
 > Find referrals for the jobs I've applied to. Start with people I know, draft the requests, and send after my confirmation.
 
-**What you get:** Relevant contacts and messages to review, starting with personal contacts and existing connections before public hiring contacts. After confirmation, the agent sends the selected requests and records delivery, replies and next steps. Existing conversations and paused roles stay respected; a request isn't a completed referral.
+**What you get:** Relevant contacts and draft messages, starting with people you know. After your confirmation, the agent sends requests and tracks replies and next steps.
 
 ## Ask Interview Coach
 
