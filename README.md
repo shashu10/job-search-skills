@@ -1,6 +1,6 @@
 # Job Search Skills
 
-Find worthwhile jobs, reach relevant people, practice interviews and negotiate offers with your AI agent.
+Find and apply to jobs, request referrals, practice interviews and negotiate offers with your AI agent.
 
 **Good inputs matter:** your work history, trusted feedback, personal contacts and study material make these skills more useful.
 
@@ -21,19 +21,21 @@ Already have a job-search folder? Ask the agent to use it. To try the workflow f
 
 > Show me how this works with a fictional candidate.
 
-## Find jobs worth applying for
+## Find and Apply to Jobs
 
-> Find suitable jobs and give me a shortlist to review. Don't apply yet.
+**Try asking**
 
-Check duties, level, location, language and work authorization. See the fit, gaps and best route for each role. Choose what to pursue, pass or hold.
+> Find jobs worth applying for, and apply after my confirmation.
 
-When you say **“Apply to these jobs,”** the agent selects a suitable resume, tailors it when needed, and records the submission receipt or blocker.
+**What you get:** A shortlist with fit, gaps and eligibility checks. You choose which jobs to apply to. After confirmation, the agent selects or tailors your resume, uses browser/computer-use tools to fill forms, uploads materials, submits and records the receipt or blocker.
 
-## Find referrals
+## Find and Request Referrals
 
-> Find referral routes for the jobs I've applied to. Start with people I know.
+**Try asking**
 
-Search personal contacts, existing connections and older recruiter conversations before public hiring contacts. Get relevant people, reasons to contact them and drafts to review. Existing conversations and paused roles stay respected.
+> Find referrals for the jobs I've applied to. Start with people I know, draft the requests, and send after my confirmation.
+
+**What you get:** Relevant contacts and messages to review, starting with personal contacts and existing connections before public hiring contacts. After confirmation, the agent sends the selected requests and records delivery, replies and next steps. Existing conversations and paused roles stay respected; a request isn't a completed referral.
 
 ## Ask Interview Coach
 

@@ -1,11 +1,11 @@
 ---
 name: job-research
-description: Find jobs worth applying for and present a ranked shortlist for the user's review. Use for company discovery, job searches, role-fit checks and pursue/pass/hold decisions; application execution and referral outreach have separate workflows.
+description: Find and apply to suitable jobs, from a ranked shortlist through confirmed application execution. Use for company discovery, job searches and role-fit checks; hand off approved applications to job-application for resume selection, form filling and submission.
 ---
 
-# Find Jobs Worth Applying For
+# Find and Apply to Jobs
 
-Find worthwhile opportunities and help the user choose which to pursue. Default to a reviewable shortlist, with a proposed application or referral route. A research-only or review-first request takes precedence over standing execution grants.
+Find worthwhile opportunities, help the user choose and complete confirmed applications through `job-application`. Default to a reviewable shortlist with a proposed application or referral route. For “find jobs worth applying for, and apply after my confirmation,” present the shortlist first and wait for confirmation of the selected applications. A research-only or review-first request takes precedence over standing execution grants.
 
 ## Resolve the private workspace
 
@@ -31,8 +31,10 @@ A missing listing on one platform does not invalidate an employer opening. Direc
 
 Consult mapped outreach records for active contacts and referrals. Use `recruiting-outreach` when available for requested contact research; named-company introductions need not wait for an exact vacancy.
 
-## Review, retain and hand off
+## Review, confirm and apply
 
 Return the requested coverage, usually a ranked batch with exact role/ID/link, concrete fit, material gaps, current status and proposed route. Invite **pursue / pass / hold** decisions; distinguish recommendations from user decisions. Preserve requested limits and breadth, including a company inventory for broad discovery.
 
-Store findings in the mapped research location. Record confirmed decisions, source, date, exact roles and scope in the owning tracker, preserving prior history. Interest or “pursue” alone is not submission permission. An explicit “apply to these” instruction grants that scope; reuse applicable grants without asking again, while respecting later holds and research-only scope. Use `job-application` for authorized execution and its resume-selection/tailoring handoff; otherwise state the next action or precise missing decision. Keep live application state solely in its tracker; preparation is not submission.
+Store findings in the mapped research location. Record confirmed decisions, source, date, exact roles and scope in the owning tracker, preserving prior history. Interest or “pursue” alone is not submission permission. An explicit “apply to these” instruction or confirmation of a concrete application proposal grants that scope; reuse applicable grants without asking again, while respecting later holds and research-only scope.
+
+After confirmation, continue with `job-application` without requiring the user to invoke another skill. That workflow selects or tailors the resume, uses available browser/computer-use tools to fill forms and upload materials, reviews answers, submits and verifies the result. If required tools or facts are missing, complete independent preparation and report the precise blocker. Keep live application state solely in its tracker; preparation is not submission.

@@ -12,12 +12,12 @@ For an update, replace the installed skill files through the host's installer or
 
 | Entry point | Stable ID |
 | --- | --- |
-| [Find Jobs Worth Applying For](../skills/job-research/SKILL.md) | `job-research` |
-| [Find Referrals](../skills/recruiting-outreach/SKILL.md) | `recruiting-outreach` |
+| [Find and Apply to Jobs](../skills/job-research/SKILL.md) | `job-research` |
+| [Find and Request Referrals](../skills/recruiting-outreach/SKILL.md) | `recruiting-outreach` |
 | [Interview Coach](../skills/job-interview/SKILL.md) | `job-interview` |
 | [Offer Negotiator](../skills/job-offer/SKILL.md) | `job-offer` |
 
-Supporting workflows remain available directly and through handoffs:
+The first two flows find options, present a concrete proposal and execute after confirmation. Applications use browser/computer-use tools for forms, uploads and submission; referrals use available messaging or browser tools. Keep explicit review-first requests in force even when an older grant exists. Supporting workflows remain available directly and through handoffs:
 
 | Task | Skill |
 | --- | --- |

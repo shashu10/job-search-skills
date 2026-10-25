@@ -18,12 +18,12 @@ Describe the task naturally; the installed skill names below are stable identifi
 
 | User request | Skill and relevant records |
 |---|---|
-| **Find Jobs Worth Applying For** — find and rank worthwhile roles for my review | `job-research`; preferences, profile, selected tracker; return a shortlist with proposed routes for the candidate's pursue/pass/hold review |
-| **Find Referrals** — find referral routes for these roles or my applications | `recruiting-outreach`; [contact record](outreach/contacts.md), relevant applications, available relationship evidence, profile |
+| **Find and Apply to Jobs** — find jobs worth applying for, and apply after my confirmation | `job-research`; preferences, profile, selected tracker; review the shortlist, then use `job-application` for confirmed applications, including resume work, forms and submission |
+| **Find and Request Referrals** — find contacts, draft requests and send after my confirmation | `recruiting-outreach`; [contact record](outreach/contacts.md), relevant applications, relationship evidence, profile; review recipients/messages/channels, then send confirmed requests and record delivery |
 | **Interview Coach** — help me practice, learn, improve a story or prepare for a round | `job-interview`; supplied goal or [practice notes](interviews/INDEX.md); profile for career claims; exact stage, employer rules and submitted materials when applicable |
 | **Offer Negotiator** — help with salary questions, potential packages or an offer | `job-offer`; preferences and relevant [negotiation notes](offers/INDEX.md); distinguish hypothetical scenarios from evidenced terms |
 
-For newly sourced jobs, ask the candidate to review the shortlist unless an existing grant already covers the next action. Store the actual pursue/pass/hold choice with its date, reason and route. Interest or "pursue" alone does not authorize submission; reuse a valid application or sending grant without asking again.
+For newly sourced jobs, ask the candidate to review the shortlist unless an existing grant already covers the next action. An explicit “after my confirmation” request takes precedence over older grants for applications or messages. Store the actual pursue/pass/hold choice with its date, reason and route. Interest or “pursue” alone does not authorize submission; confirmation of a concrete application or sending proposal does. Carry out that scope without asking again.
 
 ## Load supporting workflows when needed
 

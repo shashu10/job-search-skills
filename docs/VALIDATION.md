@@ -1,6 +1,6 @@
 # Validation and limits
 
-Release: v0.3.1, 25 October 2026.
+Release: v0.3.2, 25 October 2026.
 
 ## Automated checks
 
@@ -48,6 +48,10 @@ Two fresh independent evaluators executed the seven [intent scenarios](../tests/
 [Observed responses and selected record changes](../tests/scenarios/intent-observed-responses.json) preserve the actual fictional outputs; temporary capture paths are omitted. The independent change review found no actionable issues or private-data exposure. Package checks, all 16 unit tests and skill frontmatter validation passed.
 
 These are single observations, not a reliability rate. Catalog selection by an evaluator does not certify a host's automatic discovery implementation. No real browser, mailbox, network or scheduler was exercised. The application stopped before unavailable rendering and submission. Coaching and rehearsal stopped for candidate input; improvement was not measured. Exact model identifiers were unavailable. Earlier decision cases above remain historical rather than rerun results.
+
+## v0.3.2 confirmation handoffs
+
+An independent evaluator processed two fictional, two-turn conversations using the updated skills: find jobs then confirm an application; find referrals then confirm an email. Both waited despite older standing grants, accepted confirmation without another approval request, and recorded preparation with the exact tool-access blocker. The coordinator inspected all four responses and resulting records and verified the instruction hashes. [Inputs and actual responses](../tests/scenarios/confirmation-observed-responses.json) preserve the exercise. No browser, form filling, uploads, sends or delivery checks were available; successful external execution was not tested.
 
 ## Compatibility and external execution
 

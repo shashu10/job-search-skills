@@ -1,12 +1,12 @@
 # Product and release plan
 
-Updated 25 October 2026 for v0.3.1. The [README](../README.md) is the current capability reference.
+Updated 25 October 2026 for v0.3.2. The [README](../README.md) is the current capability reference.
 
 ## Current: four entry points, ten supporting workflows
 
-Lead with Find Jobs Worth Applying For, Find Referrals, Interview Coach and Offer Negotiator. Preserve the ten stable workflow IDs: setup, resume, research, outreach, application, interview, offer, inbox, pipeline review and requested scheduling. Keep private facts and live records outside the public package. Use natural-language installation and agent-managed setup from blank templates. Include a fictional walkthrough, decision scenarios, validation notes and an MIT license.
+Lead with Find and Apply to Jobs, Find and Request Referrals, Interview Coach and Offer Negotiator. Preserve the ten stable workflow IDs: setup, resume, research, outreach, application, interview, offer, inbox, pipeline review and requested scheduling. Keep private facts and live records outside the public package. Use natural-language installation and agent-managed setup from blank templates. Include a fictional walkthrough, decision scenarios, validation notes and an MIT license.
 
-Sourcing produces a reviewable shortlist. Explicit authorization starts applications and any necessary resume work. Referral research can sweep the applied-role cohort while preserving existing conversations. Interview coaching and compensation discussions can start before an invitation or offer. Inbox and scheduling use available host tools; they do not bundle connectors or a scheduler. Resume preparation uses available document tooling; no personal template or new renderer is included.
+Sourcing produces a reviewable shortlist. Confirmation starts applications, including resume work, browser/computer-use form filling, uploads and verified submission. Referral research can sweep the applied-role cohort, preserve existing conversations and send selected requests after confirmation. Interview coaching and compensation discussions can start before an invitation or offer. Execution, inbox and scheduling use available host tools; they do not bundle connectors or a scheduler. Resume preparation uses available document tooling; no personal template or new renderer is included.
 
 ## Next: records and optional UI
 
@@ -26,7 +26,7 @@ Start with experienced engineers already using coding agents. Observe 5–10 use
 
 ## Positioning and distribution
 
-Suggested headline: **Find worthwhile jobs, find referrals, practice interviews and negotiate offers with the AI agent you already use.**
+Suggested headline: **Find and apply to jobs, request referrals, practice interviews and negotiate offers with the AI agent you already use.**
 
 Lead with connected context, inspectable records and useful next steps. Open source, local storage and agent skills already appear in related projects; avoid first/only claims or unsupported promises of better hiring outcomes. The [fictional walkthrough](../examples/walkthrough.md) should make the benefit tangible.
 

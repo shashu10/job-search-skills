@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.2 — 2026-10-25
+
+- Rename the first two entry points to Find and Apply to Jobs and Find and Request Referrals, preserving stable skill IDs.
+- Update the example prompts and outcomes: review options, confirm selected actions, then execute without another skill invocation.
+- Make browser/computer-use form filling, uploads, submissions and referral sends explicit. Preserve scoped approvals, pauses and verified records.
+
 ## 0.3.1 — 2026-10-25
 
 - Shorten the README and example around four everyday requests.

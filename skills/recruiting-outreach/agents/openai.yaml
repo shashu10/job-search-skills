@@ -1,6 +1,6 @@
 interface:
-  display_name: "Find Referrals"
-  short_description: "Find referral routes through contacts and connections"
-  default_prompt: "Use $recruiting-outreach to find referrals for my applications, starting with existing contacts and connections, and draft the best next requests."
+  display_name: "Find and Request Referrals"
+  short_description: "Find referral routes and send confirmed requests"
+  default_prompt: "Use $recruiting-outreach to find referrals for my applications, starting with people I know, draft requests, and send after my confirmation."
 policy:
   allow_implicit_invocation: true

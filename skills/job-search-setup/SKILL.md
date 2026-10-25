@@ -11,8 +11,8 @@ Give the search a home, then get to work. Standalone coaching can start from sup
 
 Let users ask naturally:
 
-- **Find Jobs Worth Applying For** — `job-research`
-- **Find Referrals** — `recruiting-outreach`
+- **Find and Apply to Jobs** — `job-research`
+- **Find and Request Referrals** — `recruiting-outreach`
 - **Interview Coach** — `job-interview`
 - **Offer Negotiator** — `job-offer`
 

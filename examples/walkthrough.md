@@ -2,21 +2,21 @@
 
 This example is fictional. It uses supplied sample records, with no external data access, messages or submissions.
 
-## Find jobs worth applying for
+## Find and Apply to Jobs
 
-> Find jobs worth applying for. Show me the fit, the gaps and your recommended route.
+> Find jobs worth applying for, and apply after my confirmation.
 
 Candidate A wants product engineering work. Example Systems has a suitable opening; another role is mostly infrastructure. The agent checks the listings, removes duplicates and flags unknown eligibility requirements. The candidate can choose **pursue, pass or hold**.
 
-Once eligibility is confirmed and an application is authorized, resume work happens automatically. The agent reuses a suitable resume or tailors it using confirmed experience. It preserves earlier submitted versions. A prepared application stays marked prepared until submission evidence exists.
+The candidate confirms: **“Apply to the Example Systems role.”** The agent reuses or tailors the resume, then uses available browser/computer-use tools to fill the form, upload materials and submit. It preserves submitted versions and records the receipt or blocker. In this sample, browser access is unavailable, so the application stays prepared, not submitted.
 
-## Find referrals
+## Find and Request Referrals
 
-> Find referrals for the jobs I've applied to. Start with people I know and draft the asks for review.
+> Find referrals for the jobs I've applied to. Start with people I know, draft the requests, and send after my confirmation.
 
 The agent checks personal contacts, then existing connections, then public hiring contacts. The sample records contain a former teammate at Example Systems and a recruiter already handling another application.
 
-It recommends the teammate, preserves the recruiter conversation and respects paused roles. A network connection alone doesn't prove a personal relationship. For submitted applications, it checks whether a referral is still possible; otherwise, it suggests an introduction or follow-up. Messages stay drafts until sending is authorized.
+It recommends the teammate, preserves the recruiter conversation and respects paused roles. For submitted applications, it checks whether a referral is still possible; otherwise, it suggests an introduction or follow-up. The candidate reviews the recipient, message and channel, then confirms the send. With access, the agent sends and records delivery. This sample has no messaging access, so the request stays an unsent draft. A sent request is not a completed referral.
 
 ## Ask Interview Coach
 
