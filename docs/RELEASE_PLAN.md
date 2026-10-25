@@ -1,6 +1,6 @@
 # Product and release plan
 
-Updated 25 October 2026 for v0.3.2. The [README](../README.md) is the current capability reference.
+Updated 25 October 2026 for v0.3.3. The [README](../README.md) is the current capability reference.
 
 ## Current: four entry points, ten supporting workflows
 

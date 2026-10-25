@@ -54,6 +54,28 @@ class PackageTests(unittest.TestCase):
             self.assertTrue(any("resume.pdf: unexpected file type" in e for e in errors))
             self.assertTrue(any("linked.md: symbolic links" in e for e in errors))
 
+    def test_release_scan_rejects_changed_approved_image(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "package"
+            shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns(".git", "__pycache__", ".DS_Store"))
+            image = root / "docs/assets/job-search-workflow.png"
+            image.write_bytes(image.read_bytes() + b"synthetic change")
+            self.assertIn(
+                "docs/assets/job-search-workflow.png: changed binary asset; visual/privacy review required",
+                module.check(root),
+            )
+
+    def test_release_scan_rejects_image_outside_approved_path(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "package"
+            shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns(".git", "__pycache__", ".DS_Store"))
+            # Even reviewed bytes are permitted only at their approved path.
+            shutil.copyfile(root / "docs/assets/job-search-workflow.png", root / "unapproved.png")
+            self.assertIn(
+                "unapproved.png: unexpected file type; inspect before sharing",
+                module.check(root),
+            )
+
     def test_documentation_link_allowed(self):
         self.assertEqual(module.inspect_text("https://developers.openai.com/codex/skills"), [])
 

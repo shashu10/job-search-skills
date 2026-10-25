@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -19,6 +20,11 @@ EXPECTED_SKILLS = {
 }
 SKIP_PARTS = {".git", "__pycache__", ".cache"}
 TEXT_SUFFIXES = {".md", ".py", ".json", ".yaml", ".yml", ".template", ".txt"}
+# Binary contents cannot pass the text privacy screen. Approve each asset only
+# after visual/privacy review; any replacement requires a new reviewed digest.
+APPROVED_BINARY_ASSETS = {
+    "docs/assets/job-search-workflow.png": "08db14b064f695c5e49b0c02c8d53f8f16652be4d85b09c3e277003870f705a6",
+}
 SENSITIVE_PATTERNS = {
     "personal machine path": re.compile(r"/(?:Users|home)/[A-Za-z0-9_.-]+/"),
     "Windows personal path": re.compile(r"[A-Za-z]:\\Users\\[^\\\s]+\\", re.IGNORECASE),
@@ -49,6 +55,11 @@ def check(root: Path) -> list[str]:
             continue
         if relative.parts[0] in {"private", "workspace", "roles", "outreach", "resumes"}:
             errors.append(f"{relative}: candidate-data directory at package root")
+        if relative.as_posix() in APPROVED_BINARY_ASSETS:
+            digest = hashlib.sha256(file.read_bytes()).hexdigest()
+            if digest != APPROVED_BINARY_ASSETS[relative.as_posix()]:
+                errors.append(f"{relative}: changed binary asset; visual/privacy review required")
+            continue
         if file.suffix not in TEXT_SUFFIXES and file.name not in {"LICENSE", ".gitignore"}:
             errors.append(f"{relative}: unexpected file type; inspect before sharing")
             continue

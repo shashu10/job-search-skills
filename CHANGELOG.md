@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.3 — 2026-10-25
+
+- Add a public workflow diagram adapted from the article, with the four skill names, confirmation before applications and referral requests, and coaching available anytime.
+- Include the diagram in the README and download. Allow only this reviewed image in package checks; changed or unapproved binaries remain rejected.
+
 ## 0.3.2 — 2026-10-25
 
 - Rename the first two entry points to Find and Apply to Jobs and Find and Request Referrals, preserving stable skill IDs.
