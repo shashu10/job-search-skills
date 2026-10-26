@@ -5,7 +5,7 @@ description: Find and apply to suitable jobs, from a ranked shortlist through co
 
 # Find and Apply to Jobs
 
-Find worthwhile opportunities, help the user choose and complete confirmed applications through `job-application`. Default to a reviewable shortlist with a proposed application or referral route. For “find jobs worth applying for, and apply after my confirmation,” present the shortlist first and wait for confirmation of the selected applications. A research-only or review-first request takes precedence over standing execution grants.
+Find worthwhile opportunities, present a shortlist with an application or referral route, and complete confirmed applications through `job-application`. For “apply after my confirmation,” wait for approval of the selected applications. Research-only and review-first requests override standing execution grants.
 
 ## Resolve the private workspace
 
@@ -15,7 +15,7 @@ Resolve a missing workspace through `job-search-setup` when available or the use
 
 ## Discover at the requested breadth
 
-For broad company or vacancy discovery, read [discovery coverage](references/discovery.md). Use complementary sources appropriate to the candidate's market and follow employers to their careers sites. Search relevant duties and title variants. A focused exact-role check need not repeat a broad sweep.
+For broad discovery, read [discovery coverage](references/discovery.md). Search complementary sources, duties and title variants; verify employer openings. Include LinkedIn and X hiring posts and new-office/team announcements, linking them to existing vacancies where possible. Use `recruiting-outreach` for authors and reply/DM routes. Focused checks need no broad sweep.
 
 A missing listing on one platform does not invalidate an employer opening. Directories, funding news and company interest supply leads, not proof of an eligible vacancy. Retain company-only leads separately from verified roles and pending applications. Follow workspace resource limits and coordinate shared browsers without disrupting forms or tabs.
 
@@ -27,7 +27,7 @@ A missing listing on one platform does not invalidate an employer opening. Direc
 - Compare duties and requirements with corrected experience. Preserve advertised seniority; distinguish essential qualifications from preferences. Do not invent levels or years, or assume transferable experience satisfies a mandatory requirement.
 - Evaluate working language, work authorization, sponsorship, location and relocation independently. Separate positive evidence, contradictions and unknowns. Posting language does not establish daily working language.
 - Apply exact-role exceptions only within their recorded scope. An exception permits a disclosed mismatch, not invented qualifications or disregarding later pauses, submissions or outcomes.
-- Rank by work fit, level, feasibility, evidence quality and route. Explain gaps and uncertainty without manufacturing hiring probabilities.
+- Rank by work fit, level, feasibility, evidence quality and route. Reuse user-stated shortlist feedback within its scope; a single pass does not establish a broader exclusion. Explain uncertainty without manufacturing hiring probabilities.
 
 Consult mapped outreach records for active contacts and referrals. Use `recruiting-outreach` when available for requested contact research; named-company introductions need not wait for an exact vacancy.
 
@@ -35,6 +35,6 @@ Consult mapped outreach records for active contacts and referrals. Use `recruiti
 
 Return the requested coverage, usually a ranked batch with exact role/ID/link, concrete fit, material gaps, current status and proposed route. Invite **pursue / pass / hold** decisions; distinguish recommendations from user decisions. Preserve requested limits and breadth, including a company inventory for broad discovery.
 
-Store findings in the mapped research location. Record confirmed decisions, source, date, exact roles and scope in the owning tracker, preserving prior history. Interest or “pursue” alone is not submission permission. An explicit “apply to these” instruction or confirmation of a concrete application proposal grants that scope; reuse applicable grants without asking again, while respecting later holds and research-only scope.
+Store findings in the mapped research location. Record decisions and user-stated reasons, source, date, roles and scope in the owning tracker; update shared preferences for explicit broader changes. Preserve history. Interest or “pursue” alone is not submission permission. “Apply to these” or confirmation of a concrete application proposal grants that scope; reuse valid grants while respecting later holds and research-only requests.
 
 After confirmation, continue with `job-application` without requiring the user to invoke another skill. That workflow selects or tailors the resume, uses available browser/computer-use tools to fill forms and upload materials, reviews answers, submits and verifies the result. If required tools or facts are missing, complete independent preparation and report the precise blocker. Keep live application state solely in its tracker; preparation is not submission.

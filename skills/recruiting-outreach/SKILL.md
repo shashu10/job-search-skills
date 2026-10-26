@@ -1,11 +1,11 @@
 ---
 name: recruiting-outreach
-description: Find and request referrals through personal contacts, connections and public hiring contacts. Review contacts and drafts, then send confirmed requests. Also use for company introductions, recruiter follow-ups and authorized outreach.
+description: Find referrals and people promoting jobs on LinkedIn or X. Review routes and drafts, then send confirmed requests. Also use for hiring-post replies, DMs, company introductions and recruiter follow-ups.
 ---
 
 # Find and Request Referrals
 
-Find relevant people before or after applying; review contacts, relationship evidence and drafts, then send confirmed requests. “Send after my confirmation” requires approval of recipients, channel and messages despite older sending grants. Preserve existing conversations and pauses.
+Find relevant people and hiring posts before or after applying; review relationship evidence and drafts, then send confirmed requests, replies or DMs. “Send after my confirmation” overrides older grants and requires approval of recipients, channel and messages. Preserve conversations and pauses.
 
 ## Resolve the private workspace
 
@@ -15,7 +15,7 @@ Resolve a missing workspace through `job-search-setup` or the user. Sibling skil
 
 ## Choose the mode
 
-For batches, read [referral sweep](references/referral-sweep.md) for coverage and post-submission routes. General introductions, networking and agency enquiries need a company/team/location and purpose, not an invented vacancy.
+For batches or hiring-post searches, read [referral and hiring-post routes](references/referral-sweep.md). General introductions, networking and agency enquiries need a company/team/location and purpose, not an invented vacancy.
 
 ## Research and draft
 
@@ -30,7 +30,7 @@ For batches, read [referral sweep](references/referral-sweep.md) for coverage an
 
 Research/drafts authorize no sends, registrations or applications. Check current recipients, purpose, channel and limits; reuse applicable grants without asking again. Respect later pauses/revocations and spending limits; do not infer purchase permission.
 
-After confirmation, use available messaging or browser/computer-use tools to send the selected requests and verify delivery; no separate skill invocation is needed. If access is unavailable, retain unsent drafts and report the blocker.
+After confirmation, use available messaging or browser/computer-use tools to send the selected requests, replies or DMs and verify delivery. If access is unavailable, retain unsent drafts and report the blocker.
 
 For agencies, inspect fee/representation terms and recorded limits before acceptance; resolve material unknowns through an authorized route. Contact or registration does not authorize unrestricted employer submissions.
 

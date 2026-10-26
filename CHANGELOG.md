@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.5 — 2026-10-25
+
+- Connect job listings to LinkedIn and X hiring posts, team-growth and new-office announcements; draft relevant replies or DMs and send within confirmed scope.
+- Reuse user-stated shortlist feedback within its scope and check openings at known contacts' employers.
+- Reuse interview stories across competencies, developing only missing examples and preserving the facts.
+- Keep four entry points and ten skills, with the additional detail in existing references.
+
 ## 0.3.4 — 2026-10-25
 
 - Rebuild the workflow diagram as native SVG and export a crisp 2400×3680 PNG.

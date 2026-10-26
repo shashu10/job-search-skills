@@ -1,6 +1,6 @@
-# Find referrals across applications
+# Find referral and hiring-post routes
 
-Use this mode for a request such as “Find referrals for all the jobs I've applied to.” Return useful routes for the requested cohort, with honest coverage of the sources actually available. Do not turn the request into a bulk messaging campaign.
+Use for “Find referrals for all the jobs I've applied to” or “Find people promoting this role on LinkedIn or X.” Return useful routes with honest source coverage. For a single role, use its matching records; a full cohort sweep is unnecessary. Do not turn research into a bulk messaging campaign.
 
 ## Establish the cohort
 
@@ -17,6 +17,12 @@ Honor explicit source choices. Otherwise work from known relationships toward pu
 3. Relevant public people and hiring posts on LinkedIn, X, employer sites and appropriate communities. Prefer demonstrated relevance to the role/team/location over a prominent title or large follower count. Public discovery is not a claim to a warm introduction.
 
 Do not require every platform if a useful route is already established. Record what was searched, blocked or unavailable. Missing access to private connections means that source is unchecked, not that no connection exists. Do not create accounts, export an entire address book, purchase contact information or upload private contact lists as a side effect of this research. Read the minimum relevant contact details through available authorized access.
+
+## Find people promoting the opening
+
+Search LinkedIn and X (x.com) using the listing URL/requisition, title, company, team and location, alongside hiring, team-growth or new-office language. Inspect original posts, author affiliation, dates and linked vacancies; distinguish the exact role from a similar opening or general expansion. Save post links with the relevant role/contact evidence.
+
+Recommend a public reply, DM or existing conversation based on the post's invitation, available channel and recorded route. Draft a specific response to what the person posted, honoring their requested contact method. Keep private candidate details out of public replies. An invitation to contact the author does not replace the user's sending authorization.
 
 ## Choose a route after submission
 

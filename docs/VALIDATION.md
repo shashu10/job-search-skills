@@ -1,6 +1,6 @@
 # Validation and limits
 
-Release: v0.3.4, 25 October 2026.
+Release: v0.3.5, 25 October 2026.
 
 ## Automated checks
 
@@ -52,6 +52,16 @@ These are single observations, not a reliability rate. Catalog selection by an e
 ## v0.3.2 confirmation handoffs
 
 An independent evaluator processed two fictional, two-turn conversations using the updated skills: find jobs then confirm an application; find referrals then confirm an email. Both waited despite older standing grants, accepted confirmation without another approval request, and recorded preparation with the exact tool-access blocker. The coordinator inspected all four responses and resulting records and verified the instruction hashes. [Inputs and actual responses](../tests/scenarios/confirmation-observed-responses.json) preserve the exercise. No browser, form filling, uploads, sends or delivery checks were available; successful external execution was not tested.
+
+## v0.3.5 hiring posts, feedback and story reuse
+
+Two independent evaluators performed three bounded exercises from fictional source extracts, without a scoring rubric. The coordinator inspected the responses and saved records:
+
+- Hiring-post outreach selected the exact-role author and their invited DM route, kept unrelated expansion/role posts separate, preserved the prior application, and produced an unsent draft without private motivations.
+- Shortlist feedback preserved a role-specific pass and other roles at that employer, saved an explicit broader preference, and kept unstated on-call terms unknown.
+- Interview preparation reused one story for ownership and disagreement, preserved contribution boundaries and unquantified recollections, and asked for a real mentoring example instead of inventing one.
+
+These were single local dry runs, not live searches or sends. No browser access, platform delivery or coaching improvement was tested; exact evaluator model identifiers were unavailable. Existing package checks, all 22 unit tests and the three affected skills' validators passed.
 
 ## Compatibility and external execution
 

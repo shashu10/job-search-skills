@@ -39,13 +39,13 @@ Already have a job-search folder? Ask the agent to use it. To try the workflow f
 
 > Find referrals for the jobs I've applied to. Start with people I know, draft the requests, and send after my confirmation.
 
-**What you get:** Relevant contacts and draft messages, starting with people you know. After your confirmation, the agent sends requests and tracks replies and next steps.
+**What you get:** Contacts and draft replies or DMs, starting with people you know and people promoting the role on LinkedIn or X. After confirmation, the agent sends and tracks requests.
 
 ## Ask Interview Coach
 
 > Coach me on system design. Ask one question and let me answer before hints.
 
-Review code, strengthen project stories, learn a concept or run a mock. Use your study material and preparation budget. Track independent work, feedback and retries.
+Review code, reuse and strengthen project stories, learn a concept or run a mock. Use your study material and preparation budget. Track independent work, feedback and retries.
 
 ## Ask Offer Negotiator
 

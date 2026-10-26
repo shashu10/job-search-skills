@@ -14,6 +14,8 @@ Choose complementary sources for the requested market and record what was actual
 | Company directories and investor portfolios | A broader set of companies and product domains | Whether relevant teams or openings exist in the market |
 | Hiring posts, communities and referrals | Team context and named hiring routes | Current affiliation, scope and any application/referral holds |
 
+Where authorized contacts already exist, also check openings at their employers. Hiring-manager posts about a specific role, new team or office can reveal both an opportunity and a contact route. Keep the post link and date; expansion alone does not prove an open vacancy. Link an existing listing to its promoting posts rather than counting each as another job.
+
 Search several relevant titles and duty phrases derived from the candidate's preferences. Broaden titles without relaxing hard constraints. Record query terms, location filters, check dates and material access/page limits. Distinguish a source that was searched with no useful result from a blocked or unsearched source. Extend coverage when new sources yield useful employers; do not call a small familiar-employer list exhaustive.
 
 Use available authorized tools and sessions. Read-only discovery does not authorize creating accounts, purchasing access, requesting recruiter representation, enabling alerts or activating an autonomous application service. Coordinate shared browser work according to the workspace's resource and locking rules; delegates can consolidate local findings without navigating a shared session.
